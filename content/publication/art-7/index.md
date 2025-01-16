@@ -4,7 +4,7 @@ title: Crack-Parallel Stress Effect on Fracture of Fiber-Reinforced Concrete Rev
 authors:
 - Linfei Li
 - Boning Wang
-- H. \textbfXu
+- admin
 - Hoang T Nguyen
 - Zdeněk P Bažant
 - Mija H Hubler
