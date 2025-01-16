@@ -25,10 +25,7 @@ publication_short: "JMPS"
 abstract: aaa
 
 # Summary. An optional shortened abstract.
-summary: Using extensive Monte Carlo simulations and advanced statistical methods, I developed
-a novel framework for analyzing failure risks in complex structural systems. By
-studying fishnet models with over a million simulation trials, I uncovered how
-failure mechanisms transition from discrete to continuum scales.
+summary: aaaa
 
 tags:
 - Fishnet Statistics
