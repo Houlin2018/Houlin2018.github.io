@@ -93,7 +93,7 @@ skills:
       - name: Cooking
         description: ''
       - name: Traditional Chinese Musical Instruments
-        description: ''
+        description: 'Suona, Bamboo Flute, Hulusi'
 
 languages:
   - name: English
