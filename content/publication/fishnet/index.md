@@ -22,10 +22,13 @@ publication_types: ["article-journal"]
 publication: "*Journal ofthe Mechanics and Physics ofSolids*182(2024)105479"
 publication_short: "JMPS"
 
-abstract: Maaaa
+abstract: Motivated by the extraordinary strength of nacre, which exceeds the strength of its fragile constituents by an order of magnitude, the fishnet statistics became in 2017 the only analytically solvable probabilistic model of structural strength other than the weakest-link and fiber-bundle models. These two models lead, respectively, to the Weibull and Gaussian (or normal) distributions at the large-size limit, which are hardly distinguishable in the central range of failure probability. But they differ enormously at the failure probability level of 10^{-6}, considered as the maximum tolerable for engineering structures. Under the assumption that no more than three fishnet links fail prior to the peak load, the preceding studies led to exact solutions intermediate between Weibull and Gaussian distributions. Here massive Monte Carlo simulations are used to show that these exact solutions do not apply for fishnets with more than about 500 links. 
 
 # Summary. An optional shortened abstract.
-summary: aaa
+summary: Using extensive Monte Carlo simulations and advanced statistical methods, I developed
+a novel framework for analyzing failure risks in complex structural systems. By
+studying fishnet models with over a million simulation trials, I uncovered how
+failure mechanisms transition from discrete to continuum scales.
 
 tags:
 - Fishnet Statistics
