@@ -1,40 +1,42 @@
 ---
-title: 'An example conference paper'
+title: 'Asymptotically matched extrapolation offishnet failure probability to continuum scale'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
-  - Robert Ford
+  - Joshua Vievering
+  - Hoang T. Nguyen
+  - Yupeng Zhang
+  - Jia-Liang Le,
+  - Zdeněk P. Bažant
 
 # Author notes (optional)
-author_notes:
-  - 'Equal contribution'
-  - 'Equal contribution'
 
-date: '2013-07-01T00:00:00Z'
-doi: ''
+date: '2024-10-31T00:00:00Z'
+doi: 'https://doi.org/10.1016/j.jmps.2023.105479'
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2017-10-31T00:00:00Z'
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ['paper-conference']
+publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Hugo Blox Builder Conference*
-publication_short: In *ICW*
+publication: "Journal ofthe Mechanics and Physics of Solids"
+publication_short: "JMPS"
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Motivated by the extraordinary strength of nacre, which exceeds the strength of its fragile constituents by an order of magnitude, the fishnet statistics became in 2017 the only analytically solvable probabilistic model of structural strength other than the weakest-link and fiber- bundle models. These two models lead, respectively, to the Weibull and Gaussian (or normal) distributions at the large-size limit, which are hardly distinguishable in the central range of failure probability. But they differ enormously at the failure probability level of 10−6, considered as the maximum tolerable for engineering structures. Under the assumption that no more than three fishnet links fail prior to the peak load, the preceding studies led to exact solutions intermediate between Weibull and Gaussian distributions. Here massive Monte Carlo simulations are used to show that these exact solutions do not apply for fishnets with more than about 500 links.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: The simulations show that, as the number of links becomes larger, the likelihood of
+having more than three failed links up to the peak load is no longer negligible and becomes large for fishnets with many thousands of links. A differential equation is derived for the probability distribution of not-too-large fishnets, characterized by the size effect, the mean and the coefficient of variation.
 
 tags:
-  - Large Language Models
+  - Fishnet Model
 
 # Display this page in the Featured widget?
 featured: true
@@ -45,18 +47,18 @@ featured: true
 #   url: http://example.org
 
 url_pdf: ''
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
-url_dataset: 'https://github.com/HugoBlox/hugo-blox-builder'
+url_code: ''
+url_dataset: ''
 url_poster: ''
 url_project: ''
 url_slides: ''
-url_source: 'https://github.com/HugoBlox/hugo-blox-builder'
-url_video: 'https://youtube.com'
+url_source: ''
+url_video: ''
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
+  caption: 'Analytical fits of Monte Carlo simulations of failure probabilities of square fishnets of different sizes.'
   focal_point: ''
   preview_only: false
 
