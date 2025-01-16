@@ -62,36 +62,29 @@ jobs:
           exit 1
         }
 
-    - name: Debug public directory
+    - name: Verify build output
       run: |
-        echo "Checking public directory..."
-        if [ -d "public" ]; then
-          echo "Public directory exists"
-          echo "Contents of public directory:"
-          ls -la public/
-          echo "Total size of public directory:"
-          du -sh public/
-        else
-          echo "Error: public directory does not exist!"
-          echo "Contents of current directory:"
-          ls -la
+        if [ ! -d "./public" ]; then
+          echo "Error: public directory not found"
           exit 1
         fi
+        echo "Contents of public directory:"
+        ls -la ./public
 
     - name: Generate Pagefind search index
       run: npx pagefind --site "public"
 
-    - name: Package artifact
+    - name: Debug artifacts
       run: |
-        echo "Packaging artifact..."
-        tar -czf artifact.tar.gz public/
-        echo "Created artifact archive:"
-        ls -lh artifact.tar.gz
+        echo "Contents of working directory:"
+        ls -la
+        echo "Contents of public directory:"
+        ls -la public/
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: artifact.tar.gz
+        path: ./public
         name: github-pages
 
   deploy:
@@ -103,18 +96,8 @@ jobs:
     needs: build
     timeout-minutes: 10
     steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: github-pages
-        
-    - name: Unpack artifact
-      run: |
-        tar -xzf artifact.tar.gz
-        ls -la public/
-        
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v3
       with:
-        path: public/
+        artifact_name: github-pages
