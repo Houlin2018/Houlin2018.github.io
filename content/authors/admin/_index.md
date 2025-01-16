@@ -108,9 +108,15 @@ awards:
   - title: Water P. Murphy Fellowship
     date: '2020-09-17'
     awarder: Northwestern University
+  - title: 'Graduation with honor: College Graduate Excellence Award'
+    date: '2020-06-01'
+    awarder: Liaoning Province
   - title: National Scholarship
     date: '2018-11-01'
     awarder: Ministry of Education of China
+  - title: Qu Bochuan Scholarship for Academic Excellence
+    date: '2017-10-01'
+    awarder: Dalian University of Technology
 ---
 
 ## About Me
