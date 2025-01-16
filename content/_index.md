@@ -35,11 +35,9 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        My research lies at the intersection of computational mechanics, machine learning, and sustainable engineering. I developed the Smooth Crack Band Model (sCBM), which achieved a 110x speed improvement through novel coupling on high-performance computing platforms. This innovation enables real-time simulations of coupled physical phenomena, significantly advancing our understanding of fracture mechanics.
-        I am currently involved in several exciting research initiatives:
-        - Developing innovative computational models for hydraulic fracturing and CO₂ sequestration in geo-materials
-        - Advancing probabilistic analysis frameworks for extreme failure risk assessment
-        - Integrating machine learning techniques with traditional constitutive models for enhanced material behavior prediction
+        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+
+        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
         
         Please reach out to collaborate 😃
     design:
