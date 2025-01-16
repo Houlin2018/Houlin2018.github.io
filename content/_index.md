@@ -35,11 +35,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        My research lies at the intersection of computational mechanics, machine learning, and sustainable engineering. I developed the Smooth Crack Band Model (sCBM), which achieved a 110x speed improvement through novel coupling on high-performance computing platforms. This innovation enables real-time simulations of coupled physical phenomena, significantly advancing our understanding of fracture mechanics.
-        I am currently involved in several exciting research initiatives:
-        - Developing innovative computational models for hydraulic fracturing and CO₂ sequestration in geo-materials
-        - Advancing probabilistic analysis frameworks for extreme failure risk assessment
-        - Integrating machine learning techniques with traditional constitutive models for enhanced material behavior prediction
+        The broad objective of my research plan is to advance the state-of-the-art in fracture mechanics and probabilistic modeling to enhance material failure prediction and structural risk assessment. I intend to employ modern high-performance computing, statistical and machine learning tools to address critical challenges in these areas by focusing on (i) the development of innovative computational models for accurate failure analysis, and (ii) the integration of uncertainties in material behavior and loading conditions.
         
         Please reach out to collaborate! 😃
     design:

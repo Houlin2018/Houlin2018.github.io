@@ -4,7 +4,7 @@ title: The Prospect of Massive Sequestration of Atmospheric CO$_2$ in Deep Forma
   Frac Analogy
 authors:
 - Zdeněk P Bažant
-- H. Xu
+- admin
 - Anh Nguyen
 - Bill Carey
 - Mehsam Khan
