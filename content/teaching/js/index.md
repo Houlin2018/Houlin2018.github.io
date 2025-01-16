@@ -1,7 +1,7 @@
 ---
-title: Learn JavaScript
-summary: Easily learn JavaScript in 10 minutes!
-date: 2023-10-24
+title: Teaching Statement
+#summary: Easily learn JavaScript in 10 minutes!
+date: 2024-12-02
 type: docs
 math: false
 tags:
@@ -10,12 +10,22 @@ image:
   caption: 'Embed rich media such as videos and LaTeX math'
 ---
 
-[Hugo Blox Builder](https://hugoblox.com) is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.
+## Teaching Experience
 
-**Embed videos, podcasts, code, LaTeX math, and even test students!**
+I love teaching!
+Teaching has always been a profound joy in my academic journey, emerging naturally from my desire to share knowledge and help others understand complex concepts. My passion for teaching was first kindled during my undergraduate years through an unexpected role as a peer tutor in Theoretical Mechanics. What began as informal study sessions transformed into a pivotal moment in my teaching journey. I discovered that explaining intricate problems not only deepened my own understanding but also helped me develop a unique approach to making complex concepts accessible through relatable examples and clear explanations.
+The enthusiasm and trust of my fellow students profoundly shaped my teaching philosophy. As word spread about my ability to break down difficult concepts, what started as casual problem-solving sessions evolved into regular study groups. Soon, I found myself hosting informal "lecture halls" in my dormitory, covering advanced topics such as Plasticity, Fracture Mechanics, and Finite Element Methods. These organic teaching experiences taught me the importance of creating an environment where students feel comfortable asking questions and engaging with challenging material. The positive feedback from these sessions gave me the confidence to take on my first formal teaching role as an undergraduate teaching assistant for Numerical Analysis.
+At Northwestern University, my teaching responsibilities expanded significantly, allowing me to refine my pedagogical skills across different courses and contexts. As a teaching assistant for Mechanics of Materials under Prof. John Rudnicki, I led three weekly recitation sessions throughout the entire quarter, where I could put my passion for clear explanation into practice. Beyond classroom instruction, I contributed to course development by helping craft midterm and final exam questions, learning to assess student understanding effectively while maintaining appropriate challenge levels. Another significant milestone in my teaching journey was assisting Prof. Zdeněk Bažant with Structural Stability and Fracture Mechanics, where I had the opportunity to deliver lectures and provide one-on-one support during office hours. These experiences helped me develop a comprehensive approach to engineering education that combines theoretical rigor with practical application.
+Throughout my teaching experiences, I've consistently received positive feedback from students, affirming my ability to make complex material accessible while maintaining high academic standards. This encouragement has reinforced my commitment to continuous improvement as an educator.
 
-On this page, you'll find some examples of the types of technical content that can be rendered with Hugo Blox.
-
-## Video
-
-Teach your course by sharing videos with your students. Choose from one of the following approaches:
+## Teaching Philosophy
+My teaching philosophy rests on three pillars: interactive concept integration, hands-on modern skills, and diverse assessment strategies.
+First, I believe complex engineering principles are best learned through interactive concept integration, where students actively engage with the material in a structured sequence. This approach encourages participation and collaborative problem-solving, fostering a deeper understanding of challenging topics. I often use visualization techniques to clarify abstract concepts, making them more accessible. For instance, when discussing tensors, I illustrate its application through diagrams and real-world scenarios. Additionally, I upload my own course materials and instructional videos to video-sharing platforms, allowing students to review content at their own pace and explore complex topics from diverse angles. For example, my video titled “A Love Story on Mohr’s Circle” presents a creative approach to understanding stress transformations, making abstract concepts more relatable and engaging for students . By integrating technology, such as online quizzes and interactive simulations, I provide immediate feedback, enabling students to test their understanding in real time.
+Second, I emphasize hands-on implementation through computational tools, which are essential for modern engineering. I encourage students to use programming to validate analytical solutions against numerical ones and to perform iterative calculations. Additionally, I introduce them to cutting-edge algorithms for structural optimization, such as machine learning and neural networks. These practical experiences, whether applying finite element methods to analyze structures or coding simulations, equip students with the necessary tools for their future careers.
+Third, I employ comprehensive assessments that go beyond traditional tests, focusing on equipping students with effective learning strategies rather than simply assigning grades. To achieve this, I utilize diverse assessment methods, such as project design, oral presentations, and group reports, which allow students to demonstrate their understanding in various formats. For example, project design encourages practical application of theoretical concepts, while oral presentations enhance communication skills essential for their careers. Group reports foster collaboration, teaching students to work as a team and navigate interpersonal dynamics. This multifaceted approach not only evaluates knowledge but also prepares students for the collaborative and interdisciplinary nature of modern engineering, empowering them to become confident and effective professionals.
+## Teaching Interests
+During my coursework at Northwestern, I developed syllabi for Continuum Mechanics, Structural Stability, and Fracture Mechanics, preparing me to teach a comprehensive range of mechanics courses at both undergraduate and graduate levels. At the undergraduate level, I am ready to teach fundamental courses such as Theoretical Mechanics, Mechanics of Materials, and Structural Mechanics. For graduate students, I can offer advanced courses, including Finite Element Methods, Fracture Mechanics, Elasticity Theory, and Plasticity Mechanics, as well as mathematics-focused courses like Mathematical Physics Equations and Functional Analysis.
+At Virginia Tech, I am particularly excited to teach specialized courses such as Civil Engineering Materials (CEE 3684), Computer Applications in CEE (CEE 3804) and Mechanics of Composite Materials (CEE 4610), where my background in structural mechanics and applied mathematics aligns closely with the course objectives. I would also be happy to develop new subjects that integrate modern computational tools—such as high-performance computing, optimization methods, and machine learning—into mechanics education, preparing students to address complex engineering challenges with advanced methodologies.
+## Advancing Engineering Education
+Teaching is central to my professional identity and is intricately linked to my research and academic pursuits. I am committed to making complex engineering principles accessible to all students, drawing from my experiences as a peer tutor and teaching assistant. By fostering an inclusive environment, I encourage diverse perspectives that enrich the learning experience.
+As a lifelong learner and passionate educator, I am excited about opportunities for collaboration and inspiring future engineers. I look forward to advancing my teaching methods and nurturing the next generation of problem solvers equipped to tackle real-world challenges!
