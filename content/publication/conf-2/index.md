@@ -1,6 +1,6 @@
 ---
 title: Sideways branching of hydraulic cracks under osmotic pressure gradients and
-  its role in deep CO₂ sequestration and in fraccing
+  its role in deep CO$_2$ sequestration and in fraccing
 authors:
 - Zdeněk P Bažant
 - Anh Tay Nguyen
