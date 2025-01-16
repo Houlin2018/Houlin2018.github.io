@@ -5,7 +5,7 @@ date: 2024-12-02
 type: docs
 math: false
 tags:
-  - JavaScript
+  - Philosophy
 image:
   caption: 'Embed rich media such as videos and LaTeX math'
 ---
