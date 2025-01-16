@@ -4,7 +4,7 @@ title: Crack-parallel stress effect on fracture energy of plastic hardening poly
 authors:
 - A Abdullah Dönmez
 - Hoang T Nguyen
-- H. \textbfXu
+- admin
 - Zdeněk P Bažant
 date: '2023-04-01'
 publishDate: '2025-01-16T22:33:58.244829Z'

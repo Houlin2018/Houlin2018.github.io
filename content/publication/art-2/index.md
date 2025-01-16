@@ -4,7 +4,7 @@ title: On the symplectic superposition method for analytic free vibration soluti
 authors:
 - Yushi Yang
 - Dongqi An
-- H. \textbfXu
+- admin
 - Peng Li
 - Bo Wang
 - Rui Li
