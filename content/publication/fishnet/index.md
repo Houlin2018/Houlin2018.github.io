@@ -29,6 +29,7 @@ summary: Using extensive Monte Carlo simulations and advanced statistical method
 
 tags:
 - Fishnet Statistics
+- J
 featured: True
 
 # links:

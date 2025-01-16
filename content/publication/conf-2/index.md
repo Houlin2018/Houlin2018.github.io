@@ -4,7 +4,7 @@ title: Sideways branching of hydraulic cracks under osmotic pressure gradients a
 authors:
 - Zdeněk P Bažant
 - Anh Tay Nguyen
-- H. \textbfXu
+- admin
 - Anh Nguyen
 - Pouyan Asem
 - Joseph F. Labuz
@@ -15,4 +15,3 @@ publication_types:
 publication: '*58th U.S. Rock Mechanics/Geomechanics Symposium*'
 tags:
 - C
----
