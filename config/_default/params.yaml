@@ -35,7 +35,7 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      image: "stacked-peaks.svg"
+#      image: "stacked-peaks.svg"
       text: "Houlin Xu"
 
 # Site footer
