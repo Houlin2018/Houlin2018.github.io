@@ -20,14 +20,14 @@ publication_types: ["article-journal"]
 publication: "* Journal of Structural Engineering*Volume 149, Issue 9"
 publication_short: "ASCE JSE"
 
-abstract: aa
+abstract: Large-scale beam shear capacity tests were conducted at UC Berkeley (2021) and University of Toronto (2015), representing the largest three-point-bend tests to date. While these tests provided valuable data, the paper criticizes the associated blind prediction competitions as flawed because competitors were only given concrete compression strength and E modulus, without other crucial material properties. Analysis of 784 previous tests and finite-element simulations shows that accurate predictions (like the winning 2.7% error) were statistically improbable (0.90% probability), making such competitions essentially random. Although the winning solutions used beam mechanics without fracture mechanics, the tests themselves remain valuable contributions to the shear capacity database.
 
 # Summary. An optional shortened abstract.
-summary: a
+summary: 
 
 tags:
 - Large RC Beam
-featured: False
+featured: True
 
 # links:
 # - name: ""
