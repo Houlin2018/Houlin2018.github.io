@@ -1,6 +1,6 @@
 ---
 title: Teaching Statement
-#summary: Easily learn JavaScript in 10 minutes!
+summary: My teaching experience, interest and goals!
 date: 2024-12-02
 type: docs
 math: false
