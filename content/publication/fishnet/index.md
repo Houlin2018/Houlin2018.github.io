@@ -1,24 +1,14 @@
 ---
-title: "Asymptotically matched extrapolation offishnet failure probability to continuum scale"
-
-# Authors
-# If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
-# and it will be replaced with their full name and linked to their profile.
+title: "Sprain energy consequences for damage localization and fracture mechanics"
 authors:
-  - admin
-  - Joshua Vievering
-  - Hoang T. Nguyen
-  - Yupeng Zhang
-  - Jia-Liang Le,
-  - Zdeněk P. Bažant
-
-# Author notes (optional)
-
-date: '2024-10-31T00:00:00Z'
-doi: 'https://doi.org/10.1016/j.jmps.2023.105479'
+- admin
+- Anh Tay Nguyen
+- Zdeněk P. Bažant
+date: "2024-09-26T00:00:00Z"
+doi: "https://doi.org/10.1073/pnas.2410668121"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2017-10-31T00:00:00Z'
+publishDate: "2024-09-26T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -26,27 +16,22 @@ publishDate: '2017-10-31T00:00:00Z'
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Journal ofthe Mechanics and Physics of Solids"
-publication_short: "JMPS"
+publication: "*The Proceedings of the National Academy of Sciences*121 (40) e2410668121"
+publication_short: "PNAS"
 
-abstract: Motivated by the extraordinary strength of nacre, which exceeds the strength of its fragile constituents by an order of magnitude, the fishnet statistics became in 2017 the only analytically solvable probabilistic model of structural strength other than the weakest-link and fiber- bundle models. These two models lead, respectively, to the Weibull and Gaussian (or normal) distributions at the large-size limit, which are hardly distinguishable in the central range of failure probability. But they differ enormously at the failure probability level of 10−6, considered as the maximum tolerable for engineering structures. Under the assumption that no more than three fishnet links fail prior to the peak load, the preceding studies led to exact solutions intermediate between Weibull and Gaussian distributions. Here massive Monte Carlo simulations are used to show that these exact solutions do not apply for fishnets with more than about 500 links.
+abstract: The 2023 smooth Lagrangian Crack-Band Model (slCBM), inspired by the 2020 invention of the gap test, prevented spurious damage localization during fracture growth by introducing the second-gradient of the displacement field vector, named the `sprain', as the localization limiter. The key idea was that, in the finite element (FE) implementation, the displacement vector and its gradient should be treated as independent fields with the lowest (C_0) continuity, constrained by a second-order Lagrange multiplier tensor. Coupled with a realistic constitutive law for triaxial softening damage, such as microplane model M7, the known limitations of the classical Crack Band Model (CBM) were eliminated. Here we show that the slCBM closely reproduces the size effect revealed by the gap test at various crack-parallel stresses. To describe it, we present an approximate corrective formula, although a strong loading-path dependence limits its applicability. Except for the rare case of zero crack-parallel stresses, the fracture predictions of the line crack models (LEFM, phase-field, XFEM, cohesive crack models) can be as much as 100\% in error. We argue that the localization limiter concept must be extended by including the resistance to material rotation gradients. We also show that, without this resistance, the existing strain-gradient damage theories may predict a wrong fracture pattern and have, for Mode II and III fractures, a load capacity error as much as 55%. Finally, we argue that the crack-parallel stress effect must occur in all materials, ranging from concrete to atomistically sharp cracks in crystals.
 
 # Summary. An optional shortened abstract.
-summary: The simulations show that, as the number of links becomes larger, the likelihood of
-having more than three failed links up to the peak load is no longer negligible and becomes large for fishnets with many thousands of links. A differential equation is derived for the probability distribution of not-too-large fishnets, characterized by the size effect, the mean and the coefficient of variation.
+summary: The Smooth Crack Band Model (sCBM) is an innovative approach to fracture mechanics that fundamentally improves how we analyze cracks in materials. Unlike traditional methods that treat cracks as simple lines and can have up to 100% error with non-zero crack-parallel stresses, sCBM introduces a tensorial Lagrange multiplier and a "sprain" concept for better localization.
 
 tags:
-  - Fishnet Model
+- smooth Crack Band Model
+featured: True
 
-# Display this page in the Featured widget?
-featured: true
-
-# Custom links (uncomment lines below)
 # links:
-# - name: Custom Link
-#   url: http://example.org
-
-url_pdf: ''
+# - name: ""
+#   url: ""
+url_pdf: https://doi.org/10.1073/pnas.2410668121
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -56,9 +41,9 @@ url_source: ''
 url_video: ''
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
+# To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Analytical fits of Monte Carlo simulations of failure probabilities of square fishnets of different sizes.'
+  caption: 'Demonstration of sCBM'
   focal_point: ""
   preview_only: false
 
