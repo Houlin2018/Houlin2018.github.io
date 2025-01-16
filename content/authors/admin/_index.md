@@ -52,7 +52,7 @@ interests:
   - Probabilistic Modelling
 
 education:
-  - area: PhD Civil Engineering
+  - area: Ph.D. Civil Engineering
     institution: Northwestern University
     date_start: 2020-09-01
     date_end: ''
@@ -62,19 +62,22 @@ education:
 #    button:
 #      text: 'Read Thesis'
 #      url: 'https://example.com'
-  - area: BEng Engineering Mechanics
+  - area: B.Eng Engineering Mechanics
     institution: Dalian University of Technology
     date_start: 2016-01-01
     date_end: 2020-06-01
     summary: |
       GPA: 3.96/4.0
-      Thesis on _On the Vibration of Irregularly Shaped Plates Based on the Symplectic Superposition Method_.
+      Thesis _On the Vibration of Irregularly Shaped Plates Based on the Symplectic Superposition Method_.
       Courses included:
       - Mechanics of Materials
       - Elasticity
       - Plasticity
       - Fracture Mechanics
-
+teaching:
+  - name: Mechanics of Materials
+  - name: Structure Stability
+  - name: Quasi-brittle Fracture Mechanics
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
@@ -97,7 +100,7 @@ skills:
 
 languages:
   - name: English
-    percent: 80
+    percent: 90
   - name: Chinese
     percent: 100
 
