@@ -8,7 +8,7 @@ authors:
 - Jia-Liang Le
 - Zdeněk P. Bažant
 date: "2023-10-31T00:00:00Z"
-doi: "https://doi.org/10.1073/pnas.2410668121"
+doi: "https://doi.org/10.1016/j.jmps.2023.105479"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2023-10-31T00:00:00Z"

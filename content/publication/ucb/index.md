@@ -6,7 +6,7 @@ authors:
 - Hoang T. Nguyen
 - Zdeněk P. Bažant
 date: "2024-06-17T00:00:00Z"
-doi: "https://doi.org/10.1073/pnas.2410668121"
+doi: "https://doi.org/10.1061/JSENDH.STENG-1224"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-09-26T00:00:00Z"
