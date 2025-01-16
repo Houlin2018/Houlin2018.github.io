@@ -74,10 +74,6 @@ education:
       - Elasticity
       - Plasticity
       - Fracture Mechanics
-teaching:
-  - name: Mechanics of Materials
-  - name: Structure Stability
-  - name: Quasi-brittle Fracture Mechanics
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
