@@ -80,7 +80,8 @@ skills:
   - name: Technical Skills
     items:
       - name: Python, C, C++, Fortran
-      - name: Machine Learning, Mathematica, GitHub, ABAQUS, ANSYS, COMSOL
+      - name: Machine Learning, Mathematica
+      - name: ABAQUS, ANSYS, COMSOL
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
