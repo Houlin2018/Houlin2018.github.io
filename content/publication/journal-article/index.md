@@ -16,8 +16,8 @@ publishDate: "2024-09-26T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Source Themes, 1*(1)"
-publication_short: ""
+publication: "*The Proceedings of the National Academy of Sciences*121 (40) e2410668121"
+publication_short: "PNAS"
 
 abstract: The 2023 smooth Lagrangian Crack-Band Model (slCBM), inspired by the 2020 invention of the gap test, prevented spurious damage localization during fracture growth by introducing the second-gradient of the displacement field vector, named the `sprain', as the localization limiter. The key idea was that, in the finite element (FE) implementation, the displacement vector and its gradient should be treated as independent fields with the lowest (C_0) continuity, constrained by a second-order Lagrange multiplier tensor. Coupled with a realistic constitutive law for triaxial softening damage, such as microplane model M7, the known limitations of the classical Crack Band Model (CBM) were eliminated. Here we show that the slCBM closely reproduces the size effect revealed by the gap test at various crack-parallel stresses. To describe it, we present an approximate corrective formula, although a strong loading-path dependence limits its applicability. Except for the rare case of zero crack-parallel stresses, the fracture predictions of the line crack models (LEFM, phase-field, XFEM, cohesive crack models) can be as much as 100\% in error. We argue that the localization limiter concept must be extended by including the resistance to material rotation gradients. We also show that, without this resistance, the existing strain-gradient damage theories may predict a wrong fracture pattern and have, for Mode II and III fractures, a load capacity error as much as 55%. Finally, we argue that the crack-parallel stress effect must occur in all materials, ranging from concrete to atomistically sharp cracks in crystals.
 
