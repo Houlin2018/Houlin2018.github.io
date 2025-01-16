@@ -1,5 +1,5 @@
 ---
-title: The Prospect of Massive Sequestration of Atmospheric CO$_2$ in Deep Formations
+title: The Prospect of Massive Sequestration of Atmospheric CO_2 in Deep Formations
   of Basalt or Peridotite Appraised by Fracture, Diffusion and Osmosis Analysis and
   Frac Analogy
 authors:
