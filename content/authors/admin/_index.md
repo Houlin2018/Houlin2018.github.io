@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD candidate
+role: Ph.D. candidate
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -52,7 +52,7 @@ interests:
   - Probabilistic Modelling
 
 education:
-  - area: PhD Civil Engineering
+  - area: Ph.D. Civil Engineering
     institution: Northwestern University
     date_start: 2020-09-01
     date_end: ''
@@ -62,7 +62,7 @@ education:
 #    button:
 #      text: 'Read Thesis'
 #      url: 'https://example.com'
-  - area: BEng Engineering Mechanics
+  - area: B.Eng Engineering Mechanics
     institution: Dalian University of Technology
     date_start: 2016-01-01
     date_end: 2020-06-01
