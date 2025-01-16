@@ -106,7 +106,7 @@ languages:
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
   - title: 'Water P. Murphy Fellowship'
-    date: '2020-2025'
+    date: '2020'
     awarder: Northwestern University
   - title: 'Graduation with honor: College Graduate Excellence Award', 
     date: '2020'
@@ -120,5 +120,4 @@ awards:
 ---
 
 ## About Me
-I am a Ph.D. candidate in Mechanics, Materials & Structures at Northwestern University, working under the guidance of Prof. Zdeněk P. Bažant. My research
-focuses on advancing computational mechanics and structural engineering, with particular emphasis on fracture mechanics, risk assessment, and material optimization.
+I am a Ph.D. candidate in Mechanics, Materials & Structures at Northwestern University, working under the guidance of Prof. Zdeněk P. Bažant. My research focuses on advancing computational mechanics and structural engineering, with particular emphasis on fracture mechanics, risk assessment, and material optimization.
