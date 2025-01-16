@@ -22,16 +22,16 @@ publication_short: ""
 abstract: The 2023 smooth Lagrangian Crack-Band Model (slCBM), inspired by the 2020 invention of the gap test, prevented spurious damage localization during fracture growth by introducing the second-gradient of the displacement field vector, named the `sprain', as the localization limiter. The key idea was that, in the finite element (FE) implementation, the displacement vector and its gradient should be treated as independent fields with the lowest (C_0) continuity, constrained by a second-order Lagrange multiplier tensor. Coupled with a realistic constitutive law for triaxial softening damage, such as microplane model M7, the known limitations of the classical Crack Band Model (CBM) were eliminated. Here we show that the slCBM closely reproduces the size effect revealed by the gap test at various crack-parallel stresses. To describe it, we present an approximate corrective formula, although a strong loading-path dependence limits its applicability. Except for the rare case of zero crack-parallel stresses, the fracture predictions of the line crack models (LEFM, phase-field, XFEM, cohesive crack models) can be as much as 100\% in error. We argue that the localization limiter concept must be extended by including the resistance to material rotation gradients. We also show that, without this resistance, the existing strain-gradient damage theories may predict a wrong fracture pattern and have, for Mode II and III fractures, a load capacity error as much as 55%. Finally, we argue that the crack-parallel stress effect must occur in all materials, ranging from concrete to atomistically sharp cracks in crystals.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: The Smooth Crack Band Model (sCBM) is an innovative approach to fracture mechanics that fundamentally improves how we analyze cracks in materials. Unlike traditional methods that treat cracks as simple lines and can have up to 100% error with non-zero crack-parallel stresses, sCBM introduces a tensorial Lagrange multiplier and a "sprain" concept for better localization.
 
 tags:
-- Source Themes
+- smooth Crack Band Model
 featured: True
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
+url_pdf: https://doi.org/10.1073/pnas.2410668121
 url_code: ''
 url_dataset: ''
 url_poster: ''
