@@ -57,6 +57,7 @@ education:
     date_start: 2020-09-01
     date_end: ''
     summary: |
+      GPA: 3.98/4.0
       Specialize in computational mechanics and structural engineering, focusing on fracture mechanics, risk assessment, and material optimization to achieve modern fracture analysis.
 #    button:
 #      text: 'Read Thesis'
@@ -64,9 +65,9 @@ education:
   - area: BEng Engineering Mechanics
     institution: Dalian University of Technology
     date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_end: 2020-06-01
     summary: |
-      GPA: 3.9/4.0
+      GPA: 3.96/4.0
       Thesis on _On the Vibration of Irregularly Shaped Plates Based on the Symplectic Superposition Method_.
       Courses included:
       - Mechanics of Materials
