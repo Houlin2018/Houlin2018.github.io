@@ -3,7 +3,7 @@ title: Smooth Lagrangian Crack Band Model Based on Spress-Sprain Relation and La
   Multiplier Constraint of Displacement Gradient
 authors:
 - Anh Tay Nguyen
-- Houlin Xu
+- admin
 - Karel Matouš
 - Zdeněk P. Bažant
 date: '2023-11-01'
