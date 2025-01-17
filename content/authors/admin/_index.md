@@ -52,7 +52,7 @@ interests:
   - Probabilistic Modelling
 
 education:
-  - area: Ph.D. Civil Engineering | Mechancis, Materials & Structures
+  - area: Ph.D. Mechancis, Materials & Structures
     institution: Northwestern University
     date_start: 2020-09-01
     date_end: ''
