@@ -9,6 +9,7 @@ authors:
 - Bill Carey
 - Mehsam Khan
 date: '2023-01-01'
+doi: 'https://doi.org/10.56952/ARMA-2023-0845'
 publishDate: '2025-01-16T22:54:45.742529Z'
 publication_types:
 - paper-conference
