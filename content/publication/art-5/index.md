@@ -6,8 +6,8 @@ authors:
 - admin
 - Karel Matouš
 - Zdeněk P Bažant
-doi: 'https://doi.org/10.1115/1.4063896'
 date: '2024-03-01'
+doi: 'https://doi.org/10.1115/1.4063896'
 publishDate: '2025-01-16T22:33:58.254287Z'
 publication_types:
 - article-journal
