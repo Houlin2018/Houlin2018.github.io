@@ -40,7 +40,8 @@ header:
 
 # Site footer
 footer:
-  copyright: ''
+  copyright:
+    notice: ''
 
 # Localization
 locale:
