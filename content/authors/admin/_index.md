@@ -44,7 +44,7 @@ profiles:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=PWBDtOkAAAAJ&hl=en
   - icon: academicons/orcid
-    url: https://https://orcid.org/0000-0001-8262-0294
+    url: https://orcid.org/0000-0001-8262-0294
 
 interests:
   - Fracture Mechanics
