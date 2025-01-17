@@ -35,7 +35,7 @@ featured: True
 # links:
 # - name: ""
 #   url: ""
-url_pdf: https://doi.org/10.1016/j.jmps.2023.105479
+url_pdf: http://www.civil.northwestern.edu/people/bazant/PDFs/Papers/636.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
