@@ -40,13 +40,7 @@ header:
 
 # Site footer
 footer:
-  copyright:
-    notice: ''
-    license:
-      enable: false
-      allow_derivatives: false
-      share_alike: false
-      allow_commercial: false
+  copyright: ''
 
 # Localization
 locale:
