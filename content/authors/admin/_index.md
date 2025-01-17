@@ -106,9 +106,8 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Water P. Murphy Fellowship
-    date_start: '2020-09-17'
-    date_end: 'present'
+  - title: Water P. Murphy Fellowship for 5 Years
+    date: '2020-09-17'
     awarder: Northwestern University
   - title: 'Graduation with honor: College Graduate Excellence Award'
     date: '2020-06-01'
