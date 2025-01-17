@@ -1,6 +1,5 @@
 ---
-title: Smooth Lagrangian Crack Band Model (slCBM) Based on Spress-Sprain Relation
-  and Lagrange Multiplier Constraint of Displacement Gradient
+title: Smooth Lagrangian Crack Band Model (slCBM) Based on Spress-Sprain Relation and Lagrange Multiplier Constraint of Displacement Gradient
 authors:
 - Anh Tay Nguyen
 - admin
