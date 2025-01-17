@@ -6,7 +6,7 @@ authors:
 - Hoang T. Nguyen
 - Zdeněk P. Bažant
 date: "2024-06-17T00:00:00Z"
-doi: "https://doi.org/10.1061/JSENDH.STENG-1224"
+doi: "https://doi.org/10.1061/JSENDH.STENG-12242"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-09-26T00:00:00Z"
@@ -17,7 +17,7 @@ publishDate: "2024-09-26T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Journal of Structural Engineering"
+publication: "*Journal of Structural Engineering*"
 publication_short: "ASCE JSE"
 
 abstract: Large-scale beam shear capacity tests were conducted at UC Berkeley (2021) and University of Toronto (2015), representing the largest three-point-bend tests to date. While these tests provided valuable data, the paper criticizes the associated blind prediction competitions as flawed because competitors were only given concrete compression strength and E modulus, without other crucial material properties. Analysis of 784 previous tests and finite-element simulations shows that accurate predictions (like the winning 2.7% error) were statistically improbable (0.90% probability), making such competitions essentially random. Although the winning solutions used beam mechanics without fracture mechanics, the tests themselves remain valuable contributions to the shear capacity database.
@@ -33,7 +33,7 @@ featured: True
 # links:
 # - name: ""
 #   url: ""
-url_pdf: https://doi.org/10.1061/JSENDH.STENG-1224
+url_pdf: https://doi.org/10.1061/JSENDH.STENG-12242
 url_code: ''
 url_dataset: ''
 url_poster: ''
