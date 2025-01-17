@@ -19,7 +19,7 @@ publishDate: "2023-10-31T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal ofthe Mechanics and Physics of Solids*182(2024)105479"
+publication: "*Journal ofthe Mechanics and Physics of Solids*"
 publication_short: "JMPS"
 
 abstract: The simulations show that, as the number of links becomes larger, the likelihood of having more than three failed links up to the peak load is no longer negligible and becomes large for fishnets with many thousands of links. A differential equation is derived for the probability distribution of not-too-large fishnets, characterized by the size effect, the mean and the coefficient of variation.
