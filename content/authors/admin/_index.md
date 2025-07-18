@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD candidate
+role: PhD
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -55,7 +55,7 @@ education:
   - area: Ph.D. Mechancis, Materials & Structures
     institution: Northwestern University
     date_start: 2020-09-01
-    date_end: ''
+    date_end: 2025-06-01
     summary: |
       GPA: 3.98/4.0
       Specialize in computational mechanics and structural engineering, focusing on fracture mechanics, risk assessment, and material optimization to achieve modern fracture analysis.
@@ -121,4 +121,4 @@ awards:
 ---
 
 ## About Me
-I am a Ph.D. candidate in Mechanics, Materials & Structures at Northwestern University, working under the guidance of Prof. Zdeněk P. Bažant. My research focuses on advancing computational mechanics and structural engineering, with particular emphasis on fracture mechanics, risk assessment, and material optimization.
+I got my Ph.D. in Mechanics, Materials & Structures at Northwestern University in June 2025, working under the guidance of Prof. Zdeněk P. Bažant. My research focuses on advancing computational mechanics and structural engineering, with particular emphasis on fracture mechanics, risk assessment, and material optimization.
