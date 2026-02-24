@@ -2,7 +2,7 @@
 title: Smooth Lagrangian crack band model with softening spress-sprain relation and
   crack width prediction
 authors:
-- Houlin Xu
+- admin
 - Yang Zhao
 - Anh Tay Nguyen
 - Zdeněk P Bažant

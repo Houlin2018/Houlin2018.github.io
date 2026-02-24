@@ -2,7 +2,7 @@
 title: A poromechanical model for the branching of hydraulic fractures in rocks with
   pre-existing weak layers
 authors:
-- Houlin Xu
+- admin
 - Anh Tay Nguyen
 - Yang Zhao
 - Zdenek P Bažant
