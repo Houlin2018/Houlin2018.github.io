@@ -20,12 +20,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD
+role: Postdoctoral Fellow
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Northwestern University
-    url: https://www.mccormick.northwestern.edu/civil-environmental/
+  - name: Johns Hopkins University
+    url: https://hemi.jhu.edu/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -47,6 +47,7 @@ profiles:
     url: https://orcid.org/0000-0001-8262-0294
 
 interests:
+  - Machine Learning
   - Fracture Mechanics
   - Computational Mechanics
   - Probabilistic Modelling
@@ -121,4 +122,4 @@ awards:
 ---
 
 ## About Me
-I got my Ph.D. in Mechanics, Materials & Structures at Northwestern University in June 2025, working under the guidance of Prof. Zdeněk P. Bažant. My research focuses on advancing computational mechanics and structural engineering, with particular emphasis on fracture mechanics, risk assessment, and material optimization.
+I am a Postdoctoral Researcher at Johns Hopkins University, co-advised by Prof. KT Ramesh and Prof. Michael Shields, investigating machine learning applications in constitutive laws of quasibrittle materials. I received my Ph.D. in Mechanics, Materials & Structures from Northwestern University in June 2025 under Prof. Zdeněk P. Bažant. My research advances computational mechanics and structural engineering with emphasis on fracture mechanics, risk assessment, and material optimization.
