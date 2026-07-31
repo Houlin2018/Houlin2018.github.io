@@ -111,7 +111,7 @@ awards:
     date: '2025-01-01'
     awarder: 2025 USNC/TAM 5MT Competition
   - title: Walter P. Murphy Fellowship for 5 Years
-    date: '2020-2025'
+    date: '2020-09-01'
     awarder: Northwestern University
   - title: 'Graduation with honor: College Graduate Excellence Award'
     date: '2020-06-01'
