@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Houlin Xu, Postdoctoral Fellow at Johns Hopkins University. Mechanics-informed computation for predicting material failure under uncertainty.">
+<title>Houlin Xu</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237a3b2e'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23faf7f2' text-anchor='middle'%3EHX%3C/text%3E%3C/svg%3E">
+<style>
+  /* ============================================================
+     DESIGN TOKENS
+     Layout: sticky side nav, single-page scroll (from concept 1).
+     Palette: restrained, warm off-white + one accent color,
+     with a dark mode variant (also from concept 1).
+     Content: research positioning, three pillars, research map,
+     and case-study style publications (from concept 2).
+     ============================================================ */
+  :root{
+    --bg: #faf7f2;            /* warm off-white page background */
+    --bg-card: #ffffff;
+    --bg-card-alt: #f4efe6;   /* slightly deeper card, for pillar tiles */
+    --ink: #1a1712;
+    --ink-soft: #443e34;      /* darkened for readability, was too pale */
+    --accent: #7a3b2e;        /* single accent: brick red, calm and serious */
+    --accent-soft: #f0e2dc;
+    --line: #e6e0d6;
+    --radius: 12px;
+    --serif: Georgia, 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  }
+  [data-theme="dark"]{
+    --bg: #1b1a17;
+    --bg-card: #26241f;
+    --bg-card-alt: #2d2a23;
+    --ink: #f8f5ee;
+    --ink-soft: #d3cabb;      /* brightened for readability, was too dim on dark bg */
+    --accent: #e0a08c;
+    --accent-soft: #3a2b26;
+    --line: #3a372f;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); line-height:1.65; scroll-behavior:smooth;
+    transition:background .2s, color .2s;
+  }
+  h1,h2,h3{font-family:var(--serif); font-weight:500; margin:0;}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .kicker{font-size:.82rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:.5rem;}
+
+  /* ============================================================
+     LAYOUT: fixed side nav + scrolling content, single page
+     ============================================================ */
+  .shell{display:grid; grid-template-columns:220px 1fr; max-width:1100px; margin:0 auto;}
+  @media (max-width:800px){
+    .shell{grid-template-columns:1fr;}
+    .sidenav{
+      position:sticky; top:0; height:auto; border-right:none; border-bottom:1px solid var(--line);
+      flex-direction:row; align-items:center; justify-content:space-between; padding:.7rem 1.2rem;
+      background:var(--bg); z-index:10;
+    }
+    .sidenav-top{ display:flex; align-items:center; gap:1.2rem; overflow-x:auto; flex:1; }
+    .sidenav .brand{ display:flex; align-items:center; gap:.6rem; flex-shrink:0; }
+    .sidenav .avatar{ width:32px; height:32px; font-size:.85rem; margin:0; }
+    .sidenav .brand-text{ display:none; }
+    .sidenav nav{ display:flex; gap:1.1rem; }
+    .sidenav nav a{ padding:.2rem 0; white-space:nowrap; margin-left:0; border-left:none !important; }
+    .sidenav nav a.active{ border-left:none !important; text-decoration:underline; }
+    .theme-toggle{ flex-shrink:0; }
+  }
+  .sidenav{
+    position:sticky; top:0; height:100vh; padding:2.4rem 1.5rem;
+    border-right:1px solid var(--line); display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .sidenav nav a{
+    display:block; padding:.45rem 0 .45rem .8rem; margin-left:-.8rem; color:var(--ink-soft); font-size:.9rem;
+    letter-spacing:.02em; border-left:2px solid transparent; transition:border-color .15s, color .15s;
+  }
+  .sidenav nav a.active, .sidenav nav a:hover{ color:var(--accent); text-decoration:none; }
+  .sidenav nav a.active{ border-left-color:var(--accent); }
+  .avatar{
+    width:64px; height:64px; border-radius:50%; background:var(--accent-soft);
+    display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:1.3rem; color:var(--accent);
+    margin-bottom:1rem; object-fit:cover; border:1px solid var(--line);
+  }
+  .theme-toggle{
+    border:1px solid var(--line); background:none; color:var(--ink-soft); padding:.4rem .7rem;
+    border-radius:999px; cursor:pointer; font-size:.78rem;
+  }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--accent); }
+
+  main{padding:2.5rem 3rem 4rem;}
+  section{padding-top:3.2rem; scroll-margin-top:1.2rem;}
+  section:first-of-type{padding-top:0;}
+
+  /* ============================================================
+     ABOUT: identity + research positioning statement together,
+     kept compact so the full CV still fits on one page.
+     ============================================================ */
+  h1.name{font-size:2rem;}
+  .role{color:var(--ink-soft); margin-top:.3rem; font-size:1.02rem;}
+  .thesis{ font-size:1.15rem; margin-top:1.1rem; font-family:var(--serif); max-width:600px; }
+  .thesis-sub{ color:var(--ink-soft); font-size:.92rem; margin-top:.4rem; }
+
+  .cta-row{ display:flex; gap:.9rem; margin-top:1.3rem; flex-wrap:wrap; }
+  .btn{ padding:.65rem 1.3rem; border-radius:999px; font-size:.88rem; }
+  .btn-primary{ background:var(--accent); color:#fff; }
+  .btn-primary:hover{ text-decoration:none; opacity:.9; }
+  .btn-ghost{ border:1px solid var(--line); color:var(--ink); }
+  .btn-ghost:hover{ text-decoration:none; border-color:var(--accent); color:var(--accent); }
+
+  .cv-float{
+    position:fixed; right:1.4rem; bottom:1.4rem; background:var(--accent); color:#fff;
+    padding:.7rem 1.1rem; border-radius:999px; font-size:.85rem; box-shadow:0 4px 14px rgba(0,0,0,.18);
+    z-index:20;
+  }
+  .cv-float:hover{ text-decoration:none; opacity:.92; }
+
+  .social-row{ display:flex; flex-wrap:wrap; gap:.9rem; margin-top:1.2rem; font-size:.85rem; }
+  .social-row a{ color:var(--ink-soft); border-bottom:1px dotted var(--line); padding-bottom:2px; }
+  .social-row a:hover{ color:var(--accent); text-decoration:none; border-color:var(--accent); }
+
+  .tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; }
+  .tag{ background:var(--accent-soft); color:var(--accent); font-size:.8rem; padding:.35rem .8rem; border-radius:999px; }
+
+  /* ============================================================
+     THREE PILLARS: single accent color throughout, restrained
+     ============================================================ */
+  .pillars{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; margin-top:1.6rem; }
+  @media (max-width:700px){ .pillars{ grid-template-columns:1fr; } }
+  .pillar{
+    background:var(--bg-card-alt); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1.4rem; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  /* hover lift: the card rises slightly and gains a soft shadow, a common
+     "hover elevate" micro-interaction that signals the card is interactive */
+  .pillar:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 24px var(--shadow-soft, rgba(0,0,0,.08));
+    border-color:var(--accent);
+  }
+  [data-theme="dark"] .pillar:hover{ box-shadow:0 10px 24px rgba(0,0,0,.35); }
+  .pillar h3{ font-size:1rem; margin-bottom:.4rem; }
+  .pillar p{ font-size:.88rem; color:var(--ink-soft); margin:0; }
+  .pillar svg{ margin-bottom:.8rem; }
+
+  /* research map: numbered stepper connected by a thin line, instead of
+     pill-shaped nodes wrapping onto multiple lines */
+  .research-map{ display:flex; margin-top:2.3rem; }
+  .rm-step{
+    flex:1; position:relative; display:flex; flex-direction:column;
+    align-items:center; text-align:center; padding:0 .5rem;
+  }
+  .rm-step:not(:last-child)::after{
+    content:''; position:absolute; top:16px; left:50%; width:100%; height:1.5px; background:var(--line);
+  }
+  .rm-dot{
+    width:32px; height:32px; border-radius:50%; flex-shrink:0; position:relative; z-index:1;
+    background:var(--bg-card-alt); border:1.5px solid var(--accent); color:var(--accent);
+    display:flex; align-items:center; justify-content:center; font-size:.82rem; font-weight:500;
+  }
+  .rm-label{ margin-top:.7rem; font-size:.8rem; color:var(--ink-soft); line-height:1.35; }
+  @media (max-width:700px){
+    .research-map{ flex-direction:column; }
+    .rm-step{ flex-direction:row; align-items:center; text-align:left; padding:.5rem 0; }
+    .rm-step:not(:last-child)::after{ top:32px; left:16px; width:1.5px; height:calc(100% + .5rem); }
+    .rm-label{ margin-top:0; margin-left:.9rem; }
+  }
+
+  /* current research */
+  .current-list{ list-style:none; padding:0; margin:1.3rem 0 0; }
+  .current-list li{ padding:.7rem 0; border-top:1px solid var(--line); font-size:.94rem; display:flex; gap:.7rem; }
+  .current-list li:last-child{ border-bottom:1px solid var(--line); }
+  .current-list li::before{ content:'▸'; color:var(--accent); flex-shrink:0; }
+
+  /* education: degree blocks with advisor, GPA and focus, plus an awards list */
+  .edu-block{ border-top:1px solid var(--line); padding:1.1rem 0; }
+  .edu-block:last-of-type{ border-bottom:1px solid var(--line); }
+  .edu-head{ display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+  .edu-degree{ font-size:.98rem; }
+  .edu-inst{ font-size:.85rem; color:var(--ink-soft); margin-top:.2rem; }
+  .edu-date{ font-size:.85rem; color:var(--ink-soft); white-space:nowrap; }
+  .edu-summary{ font-size:.88rem; color:var(--ink-soft); margin:.7rem 0 0; max-width:600px; }
+  .edu-summary .gpa{ color:var(--accent); }
+
+  .award-list{ list-style:none; padding:0; margin:1rem 0 0; }
+  .award-list li{
+    padding:.6rem 0; border-top:1px solid var(--line); font-size:.88rem;
+    display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; color:var(--ink-soft);
+  }
+  .award-list li:last-child{ border-bottom:1px solid var(--line); }
+  .award-title{ color:var(--ink); }
+  .award-meta{ white-space:nowrap; }
+
+  /* publications as case studies, kept in a timeline rail */
+  .timeline{ position:relative; margin-top:1.4rem; padding-left:1.4rem; border-left:2px solid var(--line); }
+  .tl-item{
+    position:relative; padding:.2rem 1rem 1.8rem .2rem; border-radius:var(--radius);
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .tl-item::before{
+    content:''; position:absolute; left:-1.53rem; top:.5rem; width:9px; height:9px; border-radius:50%;
+    background:var(--accent);
+  }
+  /* same hover-lift used on the pillar cards, applied here for consistency */
+  .tl-item:hover{
+    transform:translateY(-3px); background:var(--bg-card-alt);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+  }
+  [data-theme="dark"] .tl-item:hover{ box-shadow:0 8px 20px rgba(0,0,0,.35); }
+  .tl-meta{ font-size:.8rem; color:var(--ink-soft); margin-bottom:.4rem; }
+  .tl-meta .tl-venue{ color:var(--accent); font-weight:500; }
+  .tl-title{ font-size:1rem; margin-bottom:.6rem; }
+  .tl-row{ font-size:.88rem; color:var(--ink-soft); margin-bottom:.3rem; }
+  .tl-row b{ color:var(--ink); font-weight:500; }
+  .tl-links{ margin-top:.5rem; font-size:.82rem; display:flex; gap:.9rem; }
+
+  /* the whole card is now a link to the paper's DOI, so it inherits the
+     surrounding text color instead of turning blue/underlined like a link */
+  .tl-card-link{ display:block; color:inherit; text-decoration:none; }
+  .tl-card-link:hover{ text-decoration:none; }
+  .tl-view{ margin-top:.6rem; font-size:.82rem; color:var(--accent); }
+
+  /* figure thumbnail next to each case study: a fixed white "plate" so
+     the technical plots stay legible even in dark mode */
+  .tl-content{ display:grid; grid-template-columns:150px 1fr; gap:1.3rem; align-items:start; }
+  .tl-thumb{
+    width:100%; aspect-ratio:4/3; object-fit:contain; background:#ffffff;
+    border:1px solid var(--line); border-radius:calc(var(--radius) - 4px); padding:.4rem;
+  }
+  @media (max-width:600px){
+    .tl-content{ grid-template-columns:1fr; }
+    .tl-thumb{ max-width:220px; }
+  }
+
+  /* full publications list, plain and scannable, below the 3 case studies */
+  .pub-list{ margin-top:2.2rem; }
+  .pub-item{
+    padding:.9rem .8rem; margin:0 -.8rem; border-top:1px solid var(--line); font-size:.9rem;
+    border-radius:var(--radius); transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .pub-item:last-child{ border-bottom:1px solid var(--line); }
+  .pub-item:hover{
+    transform:translateY(-3px); background:var(--bg-card-alt);
+    box-shadow:0 8px 20px rgba(0,0,0,.08); border-top-color:transparent;
+  }
+  [data-theme="dark"] .pub-item:hover{ box-shadow:0 8px 20px rgba(0,0,0,.35); }
+  .pub-item .pub-authors{ color:var(--ink-soft); }
+  .pub-item .pub-venue{ font-style:italic; color:var(--ink-soft); }
+  .pub-item .pub-cite{ font-size:.8rem; margin-left:.6rem; }
+
+  .contact-row{ display:flex; flex-wrap:wrap; gap:1rem; margin-top:1rem; font-size:.9rem; }
+  .contact-row a{ color:var(--ink-soft); border:1px solid var(--line); padding:.35rem .8rem; border-radius:999px; }
+  .contact-row a:hover{ color:var(--accent); border-color:var(--accent); text-decoration:none; }
+
+  footer{ text-align:center; color:var(--ink-soft); font-size:.78rem; padding:2rem 0 1rem; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ============ sticky side nav, highlights current section on scroll ============ -->
+  <aside class="sidenav">
+    <div class="sidenav-top">
+      <div class="brand">
+        <img class="avatar" src="avatar.jpg" alt="Houlin Xu">
+        <div class="brand-text">
+          <h3 style="font-size:1rem;">Houlin Xu</h3>
+          <p style="color:var(--ink-soft); font-size:.82rem; margin:.2rem 0 1.4rem;">Postdoctoral Fellow, JHU</p>
+        </div>
+      </div>
+      <nav id="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#current">Current work</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle dark mode</button>
+  </aside>
+
+  <main>
+
+    <!-- ============ ABOUT: identity + positioning statement, still compact ============ -->
+    <section id="about">
+      <h1 class="name">Houlin Xu</h1>
+      <p class="role">Postdoctoral Fellow · Hopkins Extreme Materials Institute, Johns Hopkins University</p>
+
+      <p class="thesis">Mechanics-informed computation for predicting material failure under uncertainty.</p>
+      <p class="thesis-sub">From constitutive learning and fracture localization to structural risk.</p>
+
+      <p style="max-width:600px; margin-top:1rem; font-size:.96rem; color:var(--ink-soft);">
+        Ph.D. in Mechanics, Materials and Structures from Northwestern University (2025), advised by
+        Prof. Zdeněk P. Bažant. Now working with Prof. KT Ramesh and Prof. Michael Shields on machine
+        learning for constitutive laws of quasibrittle materials.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Machine learning</span>
+        <span class="tag">Fracture mechanics</span>
+        <span class="tag">Computational mechanics</span>
+        <span class="tag">Probabilistic modeling</span>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="resume.pdf">Download CV</a>
+        <a class="btn btn-ghost" href="#research">Explore research</a>
+      </div>
+
+      <div class="social-row">
+        <a href="mailto:houlinxu2020@u.northwestern.edu">Email</a>
+        <a href="https://scholar.google.com/citations?user=PWBDtOkAAAAJ&hl=en">Google Scholar</a>
+        <a href="https://orcid.org/0000-0001-8262-0294">ORCID</a>
+        <a href="https://github.com/Houlin2018">GitHub</a>
+        <a href="https://www.linkedin.com/in/houlinxu">LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH: three pillars + research map ============ -->
+    <section id="research">
+      <p class="kicker">Research</p>
+      <h2 style="font-size:1.4rem;">Three pillars, one thesis</h2>
+
+      <div class="pillars">
+        <div class="pillar">
+          <svg width="48" height="34" viewBox="0 0 48 34">
+            <rect x="1" y="1" width="46" height="32" fill="none" stroke="var(--accent)" stroke-opacity=".5"/>
+            <line x1="1" y1="11" x2="47" y2="11" stroke="var(--accent)" stroke-opacity=".4"/>
+            <line x1="1" y1="22" x2="47" y2="22" stroke="var(--accent)" stroke-opacity=".4"/>
+            <line x1="16" y1="1" x2="16" y2="33" stroke="var(--accent)" stroke-opacity=".4"/>
+            <line x1="32" y1="1" x2="32" y2="33" stroke="var(--accent)" stroke-opacity=".4"/>
+            <circle cx="24" cy="17" r="2.6" fill="var(--accent)"/>
+          </svg>
+          <h3>Learning constitutive behavior</h3>
+          <p>Physics-constrained machine learning for quasibrittle constitutive relations.</p>
+        </div>
+        <div class="pillar">
+          <svg width="48" height="34" viewBox="0 0 48 34">
+            <rect x="1" y="1" width="46" height="32" fill="none" stroke="var(--accent)" stroke-opacity=".5"/>
+            <path d="M4,28 L17,19 L23,24 L32,9 L45,5" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          </svg>
+          <h3>Modeling fracture and localization</h3>
+          <p>Smooth crack band and sprain-energy formulations for damage localization.</p>
+        </div>
+        <div class="pillar">
+          <svg width="48" height="34" viewBox="0 0 48 34">
+            <rect x="1" y="1" width="46" height="32" fill="none" stroke="var(--accent)" stroke-opacity=".3"/>
+            <path d="M2,30 C11,30 13,6 24,6 C35,6 37,30 46,30" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          </svg>
+          <h3>Quantifying failure risk</h3>
+          <p>Probabilistic modeling and scale effects to predict structural failure.</p>
+        </div>
+      </div>
+
+      <div class="research-map">
+        <div class="rm-step"><div class="rm-dot">1</div><div class="rm-label">Material behavior</div></div>
+        <div class="rm-step"><div class="rm-dot">2</div><div class="rm-label">Constitutive learning</div></div>
+        <div class="rm-step"><div class="rm-dot">3</div><div class="rm-label">Damage localization &amp; fracture</div></div>
+        <div class="rm-step"><div class="rm-dot">4</div><div class="rm-label">Structural-scale failure</div></div>
+        <div class="rm-step"><div class="rm-dot">5</div><div class="rm-label">Probability and risk</div></div>
+      </div>
+    </section>
+
+    <!-- ============ CURRENT WORK ============ -->
+    <section id="current">
+      <p class="kicker">Current work</p>
+      <h2 style="font-size:1.4rem;">What I'm working on now</h2>
+      <ul class="current-list">
+        <li>Mechanics-informed constitutive learning for quasibrittle materials</li>
+        <li>Machine learning surrogates for material failure models</li>
+        <li>Open to collaboration on fracture mechanics, risk assessment and ML for materials science</li>
+      </ul>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education">
+      <p class="kicker">Education</p>
+
+      <div class="edu-block">
+        <div class="edu-head">
+          <div>
+            <div class="edu-degree">Ph.D., Mechanics, Materials &amp; Structures</div>
+            <div class="edu-inst">Northwestern University &middot; advised by Prof. Zdeněk P. Bažant</div>
+          </div>
+          <div class="edu-date">Sep 2020 – Jun 2025</div>
+        </div>
+        <p class="edu-summary">
+          <span class="gpa">GPA 3.98/4.0.</span> Specialized in computational mechanics and structural
+          engineering, focusing on fracture mechanics, risk assessment and material optimization for
+          modern fracture analysis.
+        </p>
+      </div>
+
+      <div class="edu-block">
+        <div class="edu-head">
+          <div>
+            <div class="edu-degree">B.Eng, Engineering Mechanics</div>
+            <div class="edu-inst">Dalian University of Technology</div>
+          </div>
+          <div class="edu-date">Jan 2016 – Jun 2020</div>
+        </div>
+        <p class="edu-summary">
+          <span class="gpa">GPA 3.96/4.0.</span> Thesis: <i>On the Vibration of Irregularly Shaped
+          Plates Based on the Symplectic Superposition Method</i>. Coursework included Mechanics of
+          Materials, Elasticity, Plasticity and Fracture Mechanics.
+        </p>
+      </div>
+
+      <p class="kicker" style="margin-top:2rem;">Honors &amp; awards</p>
+      <ul class="award-list">
+        <li><span class="award-title">Third Prize &amp; People's Choice Award</span><span class="award-meta">2025 USNC/TAM 5MT Competition, 2025</span></li>
+        <li><span class="award-title">Walter P. Murphy Fellowship for 5 Years</span><span class="award-meta">Northwestern University, 2020–2025</span></li>
+        <li><span class="award-title">Graduation with Honor: College Graduate Excellence Award</span><span class="award-meta">Liaoning Province, China, 2020</span></li>
+        <li><span class="award-title">National Scholarship</span><span class="award-meta">Ministry of Education of China, 2018</span></li>
+        <li><span class="award-title">Qu Bochuan Scholarship for Academic Excellence</span><span class="award-meta">Dalian University of Technology, 2017</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ PUBLICATIONS: case-study framing, timeline layout ============ -->
+    <section id="publications">
+      <p class="kicker">Publications</p>
+      <h2 style="font-size:1.4rem;">Featured Publications</h2>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <a class="tl-card-link" href="https://doi.org/10.1061/JENMDT.EMENG-9123" target="_blank" rel="noopener">
+          <div class="tl-content">
+            <img class="tl-thumb" src="featured-ucb.png" alt="Size effect plot comparing test data against the ACI-318 code line">
+            <div class="tl-body">
+              <div class="tl-meta"><span class="tl-date">2026</span> <span class="tl-venue">JEM</span></div>
+              <div class="tl-title">Critique of lower-margin equations in concrete design codes and of their effect on structural safety software</div>
+              <div class="tl-row"><b>Problem —</b> codes like ACI-318 use simplified, lower-margin strength equations that structural safety software then treats as accurate physical probability distributions.</div>
+              <div class="tl-row"><b>Introduced —</b> a statistical analysis of 784 shear tests showing the code's strength definition sits about 30% below the actual size effect.</div>
+              <div class="tl-row"><b>Why it matters —</b> presented to ACI Committee 445 (Fall 2022) and Committee 348 (Spring 2024), warning that treating code margins as real distributions can mislead safety software.</div>
+              <div class="tl-view">View paper (DOI) →</div>
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="tl-item">
+          <a class="tl-card-link" href="https://doi.org/10.1073/pnas.2410668121" target="_blank" rel="noopener">
+          <div class="tl-content">
+            <img class="tl-thumb" src="featured-scbm.png" alt="Smooth crack band model: sprain energy contour and mesh-sensitivity plots">
+            <div class="tl-body">
+              <div class="tl-meta"><span class="tl-date">2024</span> <span class="tl-venue">PNAS</span></div>
+              <div class="tl-title">Sprain energy consequences for damage localization and fracture mechanics</div>
+              <div class="tl-row"><b>Problem —</b> classical fracture models treat cracks as lines, causing mesh sensitivity and crack-parallel stress artifacts.</div>
+              <div class="tl-row"><b>Introduced —</b> a tensorial Lagrange multiplier and a "sprain" concept as a physically motivated localization limiter.</div>
+              <div class="tl-row"><b>Why it matters —</b> mesh-independent, physically grounded damage localization.</div>
+              <div class="tl-view">View paper (DOI) →</div>
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="tl-item">
+          <a class="tl-card-link" href="https://doi.org/10.1016/j.jmps.2023.105479" target="_blank" rel="noopener">
+          <div class="tl-content">
+            <img class="tl-thumb" src="featured-fishnet.png" alt="Discrete-to-continuum transition of fishnet statistics plot">
+            <div class="tl-body">
+              <div class="tl-meta"><span class="tl-date">2024</span> <span class="tl-venue">JMPS</span></div>
+              <div class="tl-title">Asymptotically matched extrapolation of fishnet failure probability to continuum scale</div>
+              <div class="tl-row"><b>Problem —</b> failure probability behaves differently at small and large scales, with no bridge between them.</div>
+              <div class="tl-row"><b>Introduced —</b> an asymptotic matching framework, validated against over a million Monte Carlo trials.</div>
+              <div class="tl-row"><b>Why it matters —</b> extrapolates small-scale failure data to continuum-scale risk predictions.</div>
+              <div class="tl-view">View paper (DOI) →</div>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+
+      <p class="kicker" style="margin-top:2rem;">Recent publications</p>
+      <div class="pub-list">
+        <div class="pub-item">
+          <span class="pub-authors">Houlin Xu, Yang Zhao, Jia-Liang Le, Anh Tay Nguyen, George Deodatis, Zdeněk P. Bažant</span> (2026).
+          Critique of lower-margin equations in concrete design codes and of their effect on structural safety software.
+          <span class="pub-venue">Journal of Engineering Mechanics</span>.
+          <a class="pub-cite" href="https://doi.org/10.1061/JENMDT.EMENG-9123">DOI</a>
+        </div>
+        <div class="pub-item">
+          <span class="pub-authors">Houlin Xu, Yang Zhao, Anh Tay Nguyen, Zdeněk P. Bažant</span> (2026).
+          <a href="https://doi.org/10.1016/j.ijnonlinmec.2026.105340">Smooth Lagrangian crack band model with softening stress-sprain relation and crack width prediction</a>.
+          <span class="pub-venue">International Journal of Non-Linear Mechanics</span>.
+          <a class="pub-cite" href="art10.bib">Cite</a>
+        </div>
+        <div class="pub-item">
+          <span class="pub-authors">Houlin Xu, Anh Tay Nguyen, Yang Zhao, Zdeněk P. Bažant</span> (2025).
+          <a href="https://doi.org/10.56952/ARMA-2025-0582">A poromechanical model for the branching of hydraulic fractures in rocks with pre-existing weak layers</a>.
+          <span class="pub-venue">ARMA US Rock Mechanics/Geomechanics Symposium</span>.
+          <a class="pub-cite" href="conf3.bib">Cite</a>
+        </div>
+        <div class="pub-item">
+          <span class="pub-authors">Houlin Xu, Anh Tay Nguyen, Zdeněk P. Bažant</span> (2024).
+          <a href="https://doi.org/10.1073/pnas.2410668121">Sprain energy consequences for damage localization and fracture mechanics</a>.
+          <span class="pub-venue">PNAS</span>.
+          <a class="pub-cite" href="https://doi.org/10.1073/pnas.2410668121">DOI</a>
+        </div>
+      </div>
+      <a href="publications-page-concept.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">See all publications →</a>
+    </section>
+
+    <!-- ============ TEACHING: short teaser, full statement lives on its own page ============ -->
+    <section id="teaching">
+      <p class="kicker">Teaching</p>
+      <h2 style="font-size:1.4rem;">I love teaching</h2>
+      <p style="max-width:600px; margin-top:.8rem; font-size:.94rem; color:var(--ink-soft);">
+        Teaching assistant for Mechanics of Materials (Prof. John Rudnicki) and Structural Stability
+        and Fracture Mechanics (Prof. Zdeněk Bažant) at Northwestern. My teaching rests on three
+        pillars: interactive concept integration, hands-on computational skills, and diverse assessment.
+      </p>
+      <div class="tags">
+        <span class="tag">Mechanics of Materials</span>
+        <span class="tag">Fracture Mechanics</span>
+        <span class="tag">Finite Element Methods</span>
+        <span class="tag">Structural Stability</span>
+      </div>
+      <a href="teaching-page-concept.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">Read full teaching statement →</a>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact">
+      <p class="kicker">Contact</p>
+      <h2 style="font-size:1.4rem;">Get in touch</h2>
+      <p style="color:var(--ink-soft); max-width:560px; margin-top:.5rem; font-size:.94rem;">
+        Open to collaboration on fracture mechanics, risk assessment and ML for materials science.
+      </p>
+      <div class="contact-row">
+        <a href="mailto:houlinxu2020@u.northwestern.edu">houlinxu2020@u.northwestern.edu</a>
+      </div>
+    </section>
+
+    <footer>&copy; <span id="year"></span> Houlin Xu</footer>
+  </main>
+</div>
+
+<a class="cv-float" href="resume.pdf">Download CV</a>
+
+<script>
+  // highlight the current section link as the user scrolls
+  const links = document.querySelectorAll('#nav a');
+  const sections = document.querySelectorAll('main section');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+  });
+
+  // dark / light toggle, in-memory only (no localStorage, per-session)
+  let dark = false;
+  function toggleTheme(){
+    dark = !dark;
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  }
+
+  // fill in the current year in the footer automatically
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
