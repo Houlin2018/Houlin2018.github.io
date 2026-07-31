@@ -293,9 +293,9 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#current">Current work</a>
-        <a href="#education">Education</a>
         <a href="#publications">Publications</a>
         <a href="#teaching">Teaching</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -396,6 +396,43 @@
     </section>
 
     <!-- ============ EDUCATION ============ -->
+    <!-- ============ PUBLICATIONS: case-study framing, timeline layout ============ -->
+    <section id="publications">
+      <p class="kicker">Publications</p>
+      <h2 style="font-size:1.4rem;">Featured Publications</h2>
+
+      <!-- Filled in by JS from publications.json (see script at bottom of page).
+           To add a future paper: run tools/add_publication.py on its .bib file --
+           it appends to publications.json and drops the cite file here, and this
+           list (and the full Publications page) update automatically. Marking a
+           paper "featured" with a case-study write-up is still a manual edit to
+           publications.json (image + narrative fields), since that needs a human
+           summary the .bib file doesn't contain. -->
+      <div class="timeline" id="featured-timeline"></div>
+
+      <p class="kicker" style="margin-top:2rem;">Recent publications</p>
+      <div class="pub-list" id="recent-pub-list"></div>
+      <a href="/pages/publications.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">See all publications →</a>
+    </section>
+
+    <!-- ============ TEACHING: short teaser, full statement lives on its own page ============ -->
+    <section id="teaching">
+      <p class="kicker">Teaching</p>
+      <h2 style="font-size:1.4rem;">I love teaching</h2>
+      <p style="max-width:600px; margin-top:.8rem; font-size:.94rem; color:var(--ink-soft);">
+        Teaching assistant for Mechanics of Materials (Prof. John Rudnicki) and Structural Stability
+        and Fracture Mechanics (Prof. Zdeněk Bažant) at Northwestern. My teaching rests on three
+        pillars: interactive concept integration, hands-on computational skills, and diverse assessment.
+      </p>
+      <div class="tags">
+        <span class="tag">Mechanics of Materials</span>
+        <span class="tag">Fracture Mechanics</span>
+        <span class="tag">Finite Element Methods</span>
+        <span class="tag">Structural Stability</span>
+      </div>
+      <a href="/pages/teaching.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">Read full teaching statement →</a>
+    </section>
+
     <section id="education">
       <p class="kicker">Education</p>
 
@@ -437,43 +474,6 @@
         <li><span class="award-title">National Scholarship</span><span class="award-meta">Ministry of Education of China, 2018</span></li>
         <li><span class="award-title">Qu Bochuan Scholarship for Academic Excellence</span><span class="award-meta">Dalian University of Technology, 2017</span></li>
       </ul>
-    </section>
-
-    <!-- ============ PUBLICATIONS: case-study framing, timeline layout ============ -->
-    <section id="publications">
-      <p class="kicker">Publications</p>
-      <h2 style="font-size:1.4rem;">Featured Publications</h2>
-
-      <!-- Filled in by JS from publications.json (see script at bottom of page).
-           To add a future paper: run tools/add_publication.py on its .bib file --
-           it appends to publications.json and drops the cite file here, and this
-           list (and the full Publications page) update automatically. Marking a
-           paper "featured" with a case-study write-up is still a manual edit to
-           publications.json (image + narrative fields), since that needs a human
-           summary the .bib file doesn't contain. -->
-      <div class="timeline" id="featured-timeline"></div>
-
-      <p class="kicker" style="margin-top:2rem;">Recent publications</p>
-      <div class="pub-list" id="recent-pub-list"></div>
-      <a href="/pages/publications.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">See all publications →</a>
-    </section>
-
-    <!-- ============ TEACHING: short teaser, full statement lives on its own page ============ -->
-    <section id="teaching">
-      <p class="kicker">Teaching</p>
-      <h2 style="font-size:1.4rem;">I love teaching</h2>
-      <p style="max-width:600px; margin-top:.8rem; font-size:.94rem; color:var(--ink-soft);">
-        Teaching assistant for Mechanics of Materials (Prof. John Rudnicki) and Structural Stability
-        and Fracture Mechanics (Prof. Zdeněk Bažant) at Northwestern. My teaching rests on three
-        pillars: interactive concept integration, hands-on computational skills, and diverse assessment.
-      </p>
-      <div class="tags">
-        <span class="tag">Mechanics of Materials</span>
-        <span class="tag">Fracture Mechanics</span>
-        <span class="tag">Finite Element Methods</span>
-        <span class="tag">Structural Stability</span>
-      </div>
-      <a href="/pages/teaching.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">Read full teaching statement →</a>
     </section>
 
     <!-- ============ CONTACT ============ -->
