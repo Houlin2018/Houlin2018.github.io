@@ -30,6 +30,41 @@ sections:
           size: cover
           position: center
           parallax: false
+  - block: features
+    id: research-pillars
+    content:
+      title: Research
+      subtitle: Three pillars, one thesis
+      items:
+        - name: Learning constitutive behavior
+          icon: brain
+          icon_pack: fas
+          description: Physics-constrained machine learning for quasibrittle constitutive relations.
+        - name: Modeling fracture and localization
+          icon: bolt
+          icon_pack: fas
+          description: Smooth crack band and sprain-energy formulations for damage localization.
+        - name: Quantifying failure risk
+          icon: chart-line
+          icon_pack: fas
+          description: Probabilistic modeling and scale effects to predict structural failure.
+        - name: Subsurface fracture and CO2 storage
+          icon: water
+          icon_pack: fas
+          description: Multiphysics models of hydraulic fracture branching for carbon sequestration.
+    design:
+      columns: '4'
+  - block: markdown
+    id: current-work
+    content:
+      title: Current Work
+      subtitle: ''
+      text: |-
+        - Mechanics-informed constitutive learning for quasibrittle materials
+        - Machine learning surrogates for material failure models
+        - Open to collaboration on fracture mechanics, risk assessment and ML for materials science
+    design:
+      columns: '1'
   - block: markdown
     content:
       title: '📚 My Research'

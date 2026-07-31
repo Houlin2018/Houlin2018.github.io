@@ -28,7 +28,7 @@ summary:
 tags:
 - Large RC Beam
 - J
-featured: True
+featured: False
 
 # links:
 # - name: ""

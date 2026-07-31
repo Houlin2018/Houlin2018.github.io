@@ -53,7 +53,7 @@ interests:
   - Probabilistic Modelling
 
 education:
-  - area: Ph.D. Mechancis, Materials & Structures
+  - area: Ph.D. Mechanics, Materials & Structures
     institution: Northwestern University
     date_start: 2020-09-01
     date_end: 2025-06-01
@@ -107,12 +107,15 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Water P. Murphy Fellowship for 5 Years
-    date: '2020-09-17'
+  - title: 'Third Prize & People''s Choice Award'
+    date: '2025-01-01'
+    awarder: 2025 USNC/TAM 5MT Competition
+  - title: Walter P. Murphy Fellowship for 5 Years
+    date: '2020-2025'
     awarder: Northwestern University
   - title: 'Graduation with honor: College Graduate Excellence Award'
     date: '2020-06-01'
-    awarder: Liaoning Province
+    awarder: Liaoning Province, China
   - title: National Scholarship
     date: '2018-11-01'
     awarder: Ministry of Education of China
@@ -122,4 +125,6 @@ awards:
 ---
 
 ## About Me
+**Mechanics-informed computation for predicting material failure under uncertainty** — from constitutive learning and fracture localization to structural risk.
+
 I am a Postdoctoral Researcher at Johns Hopkins University, co-advised by Prof. KT Ramesh and Prof. Michael Shields, investigating machine learning applications in constitutive laws of quasibrittle materials. I received my Ph.D. in Mechanics, Materials & Structures from Northwestern University in June 2025 under Prof. Zdeněk P. Bažant. My research advances computational mechanics and structural engineering with emphasis on fracture mechanics, risk assessment, and material optimization.

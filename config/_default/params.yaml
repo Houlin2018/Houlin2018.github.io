@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   mode: system
-  color: emerald
+  color: red
 
 # SEO
 marketing:
@@ -14,7 +14,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
+    description: 'Houlin Xu, Postdoctoral Fellow at Johns Hopkins University. Mechanics-informed computation for predicting material failure under uncertainty: constitutive learning, fracture mechanics, and probabilistic risk.'
     twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
