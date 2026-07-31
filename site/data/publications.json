@@ -1,0 +1,309 @@
+[
+  {
+    "key": "art9",
+    "type": "journal",
+    "title": "Critique of lower-margin equations in concrete design codes and of their effect on structural safety software",
+    "authors": [
+      "Houlin Xu",
+      "Yang Zhao",
+      "Jia-Liang Le",
+      "Anh Tay Nguyen",
+      "George Deodatis",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "Journal of Engineering Mechanics",
+    "venueShort": "JEM",
+    "year": 2026,
+    "date": "2026-06-01",
+    "doi": "https://doi.org/10.1061/JENMDT.EMENG-9123",
+    "cite": "/citations/art9.bib",
+    "featured": true,
+    "image": "/assets/images/featured-ucb.png",
+    "imageAlt": "Size effect plot comparing test data against the ACI-318 code line",
+    "narrative": {
+      "problem": "codes like ACI-318 use simplified, lower-margin strength equations that structural safety software then treats as accurate physical probability distributions.",
+      "introduced": "a statistical analysis of 784 shear tests showing the code's strength definition sits about 30% below the actual size effect.",
+      "whyItMatters": "presented to ACI Committee 445 (Fall 2022) and Committee 348 (Spring 2024), warning that treating code margins as real distributions can mislead safety software."
+    }
+  },
+  {
+    "key": "art10",
+    "type": "journal",
+    "title": "Smooth Lagrangian crack band model with softening spress-sprain relation and crack width prediction",
+    "authors": [
+      "Houlin Xu",
+      "Yang Zhao",
+      "Anh Tay Nguyen",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "International Journal of Non-Linear Mechanics",
+    "venueShort": "IJNLM",
+    "year": 2026,
+    "date": "2026-01-01",
+    "doi": "https://doi.org/10.1016/j.ijnonlinmec.2026.105340",
+    "cite": "/citations/art10.bib",
+    "featured": false
+  },
+  {
+    "key": "art8",
+    "type": "journal",
+    "title": "Sprain energy consequences for damage localization and fracture mechanics",
+    "authors": [
+      "Houlin Xu",
+      "Anh Tay Nguyen",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "PNAS",
+    "venueShort": "PNAS",
+    "year": 2024,
+    "date": "2024-09-26",
+    "doi": "https://doi.org/10.1073/pnas.2410668121",
+    "cite": "/citations/art8.bib",
+    "featured": true,
+    "image": "/assets/images/featured-scbm.png",
+    "imageAlt": "Smooth crack band model: sprain energy contour and mesh-sensitivity plots",
+    "narrative": {
+      "problem": "classical fracture models treat cracks as lines, causing mesh sensitivity and crack-parallel stress artifacts.",
+      "introduced": "a tensorial Lagrange multiplier and a \"sprain\" concept as a physically motivated localization limiter.",
+      "whyItMatters": "mesh-independent, physically grounded damage localization."
+    }
+  },
+  {
+    "key": "art7",
+    "type": "journal",
+    "title": "Crack-Parallel Stress Effect on Fracture of Fiber-Reinforced Concrete Revealed by Gap Tests",
+    "authors": [
+      "Linfei Li",
+      "Boning Wang",
+      "Houlin Xu",
+      "Hoang T. Nguyen",
+      "Zdeněk P. Bažant",
+      "Mija H. Hubler"
+    ],
+    "venue": "Journal of Engineering Mechanics",
+    "venueShort": "JEM",
+    "year": 2024,
+    "date": "2024-06-01",
+    "doi": "https://doi.org/10.1061/JENMDT.EMENG-7531",
+    "cite": "/citations/art7.bib",
+    "featured": false
+  },
+  {
+    "key": "art6",
+    "type": "journal",
+    "title": "Asymptotically matched extrapolation of fishnet failure probability to continuum scale",
+    "authors": [
+      "Houlin Xu",
+      "Joshua Vievering",
+      "Hoang T. Nguyen",
+      "Yupeng Zhang",
+      "Jia-Liang Le",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "Journal of the Mechanics and Physics of Solids",
+    "venueShort": "JMPS",
+    "year": 2024,
+    "date": "2024-03-01",
+    "doi": "https://doi.org/10.1016/j.jmps.2023.105479",
+    "cite": "/citations/art6.bib",
+    "featured": true,
+    "image": "/assets/images/featured-fishnet.png",
+    "imageAlt": "Discrete-to-continuum transition of fishnet statistics plot",
+    "narrative": {
+      "problem": "failure probability behaves differently at small and large scales, with no bridge between them.",
+      "introduced": "an asymptotic matching framework, validated against over a million Monte Carlo trials.",
+      "whyItMatters": "extrapolates small-scale failure data to continuum-scale risk predictions."
+    }
+  },
+  {
+    "key": "art5",
+    "type": "journal",
+    "title": "Smooth Lagrangian Crack Band Model (slCBM) Based on Spress-Sprain Relation and Lagrange Multiplier Constraint of Displacement Gradient",
+    "authors": [
+      "Anh Tay Nguyen",
+      "Houlin Xu",
+      "Karel Matouš",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "Journal of Applied Mechanics",
+    "venueShort": "JAM",
+    "year": 2024,
+    "date": "2024-01-01",
+    "doi": "https://doi.org/10.1115/1.4063896",
+    "cite": "/citations/art5.bib",
+    "featured": false
+  },
+  {
+    "key": "art1",
+    "type": "journal",
+    "title": "What We Can and Cannot Learn from a Single Shear Test of a Very Large RC Beam",
+    "authors": [
+      "Houlin Xu",
+      "A. Abdullah Dönmez",
+      "Hoang T. Nguyen",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "Journal of Structural Engineering",
+    "venueShort": "ASCE JSE",
+    "year": 2023,
+    "date": "2023-09-01",
+    "doi": "https://doi.org/10.1061/JSENDH.STENG-12242",
+    "cite": "/citations/art1.bib",
+    "featured": false
+  },
+  {
+    "key": "art4",
+    "type": "journal",
+    "title": "Crack-parallel stress effect on fracture energy of plastic hardening polycrystalline metal identified from gap test scaling",
+    "authors": [
+      "A. Abdullah Dönmez",
+      "Hoang T. Nguyen",
+      "Houlin Xu",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "Journal of the Mechanics and Physics of Solids",
+    "venueShort": "JMPS",
+    "year": 2023,
+    "date": "2023-04-01",
+    "doi": "https://doi.org/10.1016/j.jmps.2023.105222",
+    "cite": "/citations/art4.bib",
+    "featured": false
+  },
+  {
+    "key": "art2",
+    "type": "journal",
+    "title": "On the symplectic superposition method for analytic free vibration solutions of right triangular plates",
+    "authors": [
+      "Yushi Yang",
+      "Dongqi An",
+      "Houlin Xu",
+      "Peng Li",
+      "Bo Wang",
+      "Rui Li"
+    ],
+    "venue": "Archive of Applied Mechanics",
+    "venueShort": "AAM",
+    "year": 2021,
+    "date": "2021-01-01",
+    "doi": "https://doi.org/10.1007/s00419-020-01763-7",
+    "cite": "/citations/art2.bib",
+    "featured": false
+  },
+  {
+    "key": "art3",
+    "type": "journal",
+    "title": "New analytic buckling solutions of rectangular thin plates with two free adjacent edges by the symplectic superposition method",
+    "authors": [
+      "Rui Li",
+      "Haiyang Wang",
+      "Xinran Zheng",
+      "Sijun Xiong",
+      "Zhaoyang Hu",
+      "Xiaoye Yan",
+      "Zhe Xiao",
+      "Houlin Xu",
+      "Peng Li"
+    ],
+    "venue": "European Journal of Mechanics - A/Solids",
+    "venueShort": "EJM-A/Solids",
+    "year": 2019,
+    "date": "2019-01-01",
+    "doi": "https://doi.org/10.1016/j.euromechsol.2019.04.014",
+    "cite": "/citations/art3.bib",
+    "featured": false
+  },
+  {
+    "key": "art11",
+    "type": "preparation",
+    "title": "A Gaussian-Process State-Space Machine Learning Framework for Constitutive Modeling of Quasi-Brittle Materials",
+    "authors": [
+      "Houlin Xu",
+      "Chenyang Li",
+      "Michael Shields",
+      "K. T. Ramesh"
+    ],
+    "venue": null,
+    "year": null,
+    "date": null,
+    "doi": null,
+    "cite": "/citations/art11.bib",
+    "featured": false
+  },
+  {
+    "key": "conf4",
+    "type": "conference",
+    "title": "Risk from using marginal design code equations and unphysical strength probability distributions in structural safety software — a wake-up call",
+    "authors": [
+      "Houlin Xu",
+      "Yang Zhao",
+      "Jia-Liang Le",
+      "Anh Tay Nguyen",
+      "George Deodatis",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "Computational Modelling of Concrete and Concrete Structures",
+    "venueShort": "EURO-C",
+    "year": 2026,
+    "date": "2026-01-01",
+    "doi": null,
+    "cite": "/citations/conf4.bib",
+    "featured": false
+  },
+  {
+    "key": "conf3",
+    "type": "conference",
+    "title": "A poromechanical model for the branching of hydraulic fractures in rocks with pre-existing weak layers",
+    "authors": [
+      "Houlin Xu",
+      "Anh Tay Nguyen",
+      "Yang Zhao",
+      "Zdeněk P. Bažant"
+    ],
+    "venue": "59th U.S. Rock Mechanics/Geomechanics Symposium",
+    "venueShort": "ARMA",
+    "year": 2025,
+    "date": "2025-01-01",
+    "doi": "https://doi.org/10.56952/ARMA-2025-0582",
+    "cite": "/citations/conf3.bib",
+    "featured": false
+  },
+  {
+    "key": "conf2",
+    "type": "conference",
+    "title": "Sideways branching of hydraulic cracks under osmotic pressure gradients and its role in deep CO₂ sequestration and in fraccing",
+    "authors": [
+      "Zdeněk P. Bažant",
+      "Anh Tay Nguyen",
+      "Houlin Xu",
+      "Anh Nguyen",
+      "Pouyan Asem",
+      "Joseph F. Labuz"
+    ],
+    "venue": "58th U.S. Rock Mechanics/Geomechanics Symposium",
+    "venueShort": "ARMA",
+    "year": 2024,
+    "date": "2024-01-01",
+    "doi": null,
+    "cite": "/citations/conf2.bib",
+    "featured": false
+  },
+  {
+    "key": "conf1",
+    "type": "conference",
+    "title": "The Prospect of Massive Sequestration of Atmospheric CO₂ in Deep Formations of Basalt or Peridotite Appraised by Fracture, Diffusion and Osmosis Analysis and Frac Analogy",
+    "authors": [
+      "Zdeněk P. Bažant",
+      "Houlin Xu",
+      "Anh Nguyen",
+      "Bill Carey",
+      "Mehsam Khan"
+    ],
+    "venue": "57th U.S. Rock Mechanics/Geomechanics Symposium",
+    "venueShort": "ARMA",
+    "year": 2023,
+    "date": "2023-01-01",
+    "doi": null,
+    "cite": "/citations/conf1.bib",
+    "featured": false
+  }
+]

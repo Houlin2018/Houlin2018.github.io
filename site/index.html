@@ -265,7 +265,7 @@
   <aside class="sidenav">
     <div class="sidenav-top">
       <div class="brand">
-        <img class="avatar" src="avatar.jpg" alt="Houlin Xu">
+        <img class="avatar" src="/assets/images/avatar.jpg" alt="Houlin Xu">
         <div class="brand-text">
           <h3 style="font-size:1rem;">Houlin Xu</h3>
           <p style="color:var(--ink-soft); font-size:.82rem; margin:.2rem 0 1.4rem;">Postdoctoral Fellow, JHU</p>
@@ -308,7 +308,7 @@
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="resume.pdf">Download CV</a>
+        <a class="btn btn-primary" href="/assets/resume.pdf">Download CV</a>
         <a class="btn btn-ghost" href="#research">Explore research</a>
       </div>
 
@@ -426,84 +426,18 @@
       <p class="kicker">Publications</p>
       <h2 style="font-size:1.4rem;">Featured Publications</h2>
 
-      <div class="timeline">
-        <div class="tl-item">
-          <a class="tl-card-link" href="https://doi.org/10.1061/JENMDT.EMENG-9123" target="_blank" rel="noopener">
-          <div class="tl-content">
-            <img class="tl-thumb" src="featured-ucb.png" alt="Size effect plot comparing test data against the ACI-318 code line">
-            <div class="tl-body">
-              <div class="tl-meta"><span class="tl-date">2026</span> <span class="tl-venue">JEM</span></div>
-              <div class="tl-title">Critique of lower-margin equations in concrete design codes and of their effect on structural safety software</div>
-              <div class="tl-row"><b>Problem —</b> codes like ACI-318 use simplified, lower-margin strength equations that structural safety software then treats as accurate physical probability distributions.</div>
-              <div class="tl-row"><b>Introduced —</b> a statistical analysis of 784 shear tests showing the code's strength definition sits about 30% below the actual size effect.</div>
-              <div class="tl-row"><b>Why it matters —</b> presented to ACI Committee 445 (Fall 2022) and Committee 348 (Spring 2024), warning that treating code margins as real distributions can mislead safety software.</div>
-              <div class="tl-view">View paper (DOI) →</div>
-            </div>
-          </div>
-          </a>
-        </div>
-
-        <div class="tl-item">
-          <a class="tl-card-link" href="https://doi.org/10.1073/pnas.2410668121" target="_blank" rel="noopener">
-          <div class="tl-content">
-            <img class="tl-thumb" src="featured-scbm.png" alt="Smooth crack band model: sprain energy contour and mesh-sensitivity plots">
-            <div class="tl-body">
-              <div class="tl-meta"><span class="tl-date">2024</span> <span class="tl-venue">PNAS</span></div>
-              <div class="tl-title">Sprain energy consequences for damage localization and fracture mechanics</div>
-              <div class="tl-row"><b>Problem —</b> classical fracture models treat cracks as lines, causing mesh sensitivity and crack-parallel stress artifacts.</div>
-              <div class="tl-row"><b>Introduced —</b> a tensorial Lagrange multiplier and a "sprain" concept as a physically motivated localization limiter.</div>
-              <div class="tl-row"><b>Why it matters —</b> mesh-independent, physically grounded damage localization.</div>
-              <div class="tl-view">View paper (DOI) →</div>
-            </div>
-          </div>
-          </a>
-        </div>
-
-        <div class="tl-item">
-          <a class="tl-card-link" href="https://doi.org/10.1016/j.jmps.2023.105479" target="_blank" rel="noopener">
-          <div class="tl-content">
-            <img class="tl-thumb" src="featured-fishnet.png" alt="Discrete-to-continuum transition of fishnet statistics plot">
-            <div class="tl-body">
-              <div class="tl-meta"><span class="tl-date">2024</span> <span class="tl-venue">JMPS</span></div>
-              <div class="tl-title">Asymptotically matched extrapolation of fishnet failure probability to continuum scale</div>
-              <div class="tl-row"><b>Problem —</b> failure probability behaves differently at small and large scales, with no bridge between them.</div>
-              <div class="tl-row"><b>Introduced —</b> an asymptotic matching framework, validated against over a million Monte Carlo trials.</div>
-              <div class="tl-row"><b>Why it matters —</b> extrapolates small-scale failure data to continuum-scale risk predictions.</div>
-              <div class="tl-view">View paper (DOI) →</div>
-            </div>
-          </div>
-          </a>
-        </div>
-      </div>
+      <!-- Filled in by JS from publications.json (see script at bottom of page).
+           To add a future paper: run tools/add_publication.py on its .bib file --
+           it appends to publications.json and drops the cite file here, and this
+           list (and the full Publications page) update automatically. Marking a
+           paper "featured" with a case-study write-up is still a manual edit to
+           publications.json (image + narrative fields), since that needs a human
+           summary the .bib file doesn't contain. -->
+      <div class="timeline" id="featured-timeline"></div>
 
       <p class="kicker" style="margin-top:2rem;">Recent publications</p>
-      <div class="pub-list">
-        <div class="pub-item">
-          <span class="pub-authors">Houlin Xu, Yang Zhao, Jia-Liang Le, Anh Tay Nguyen, George Deodatis, Zdeněk P. Bažant</span> (2026).
-          Critique of lower-margin equations in concrete design codes and of their effect on structural safety software.
-          <span class="pub-venue">Journal of Engineering Mechanics</span>.
-          <a class="pub-cite" href="https://doi.org/10.1061/JENMDT.EMENG-9123">DOI</a>
-        </div>
-        <div class="pub-item">
-          <span class="pub-authors">Houlin Xu, Yang Zhao, Anh Tay Nguyen, Zdeněk P. Bažant</span> (2026).
-          <a href="https://doi.org/10.1016/j.ijnonlinmec.2026.105340">Smooth Lagrangian crack band model with softening stress-sprain relation and crack width prediction</a>.
-          <span class="pub-venue">International Journal of Non-Linear Mechanics</span>.
-          <a class="pub-cite" href="art10.bib">Cite</a>
-        </div>
-        <div class="pub-item">
-          <span class="pub-authors">Houlin Xu, Anh Tay Nguyen, Yang Zhao, Zdeněk P. Bažant</span> (2025).
-          <a href="https://doi.org/10.56952/ARMA-2025-0582">A poromechanical model for the branching of hydraulic fractures in rocks with pre-existing weak layers</a>.
-          <span class="pub-venue">ARMA US Rock Mechanics/Geomechanics Symposium</span>.
-          <a class="pub-cite" href="conf3.bib">Cite</a>
-        </div>
-        <div class="pub-item">
-          <span class="pub-authors">Houlin Xu, Anh Tay Nguyen, Zdeněk P. Bažant</span> (2024).
-          <a href="https://doi.org/10.1073/pnas.2410668121">Sprain energy consequences for damage localization and fracture mechanics</a>.
-          <span class="pub-venue">PNAS</span>.
-          <a class="pub-cite" href="https://doi.org/10.1073/pnas.2410668121">DOI</a>
-        </div>
-      </div>
-      <a href="publications-page-concept.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">See all publications →</a>
+      <div class="pub-list" id="recent-pub-list"></div>
+      <a href="/pages/publications.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">See all publications →</a>
     </section>
 
     <!-- ============ TEACHING: short teaser, full statement lives on its own page ============ -->
@@ -521,7 +455,7 @@
         <span class="tag">Finite Element Methods</span>
         <span class="tag">Structural Stability</span>
       </div>
-      <a href="teaching-page-concept.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">Read full teaching statement →</a>
+      <a href="/pages/teaching.html" style="font-size:.88rem; display:inline-block; margin-top:1.2rem;">Read full teaching statement →</a>
     </section>
 
     <!-- ============ CONTACT ============ -->
@@ -540,7 +474,7 @@
   </main>
 </div>
 
-<a class="cv-float" href="resume.pdf">Download CV</a>
+<a class="cv-float" href="/assets/resume.pdf">Download CV</a>
 
 <script>
   // highlight the current section link as the user scrolls
@@ -561,6 +495,85 @@
 
   // fill in the current year in the footer automatically
   document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- ============================================================
+     PUBLICATIONS RENDERER
+     Single source of truth is publications.json. This page reads it,
+     picks the papers marked "featured": true for the case-study
+     timeline (with their narrative + image), and the most recent
+     papers overall for the "Recent publications" list underneath.
+     Adding a new paper (see tools/add_publication.py) never requires
+     touching this HTML -- it just needs a new entry in the JSON.
+     ============================================================ -->
+<script>
+  // simple HTML-escaping helper, since titles/authors come from data
+  function escapeHtml(str){
+    const div = document.createElement('div');
+    div.textContent = str == null ? '' : str;
+    return div.innerHTML;
+  }
+
+  function byDateDesc(a, b){
+    return new Date(b.date || 0) - new Date(a.date || 0);
+  }
+
+  function renderFeatured(pubs){
+    const featured = pubs.filter(p => p.featured).sort(byDateDesc);
+    const el = document.getElementById('featured-timeline');
+    el.innerHTML = featured.map(p => `
+      <div class="tl-item">
+        <a class="tl-card-link" href="${p.doi || '#'}" target="_blank" rel="noopener">
+        <div class="tl-content">
+          <img class="tl-thumb" src="${p.image}" alt="${escapeHtml(p.imageAlt || p.title)}">
+          <div class="tl-body">
+            <div class="tl-meta"><span class="tl-date">${p.year}</span> <span class="tl-venue">${escapeHtml(p.venueShort || p.venue)}</span></div>
+            <div class="tl-title">${escapeHtml(p.title)}</div>
+            ${p.narrative ? `
+            <div class="tl-row"><b>Problem —</b> ${escapeHtml(p.narrative.problem)}</div>
+            <div class="tl-row"><b>Introduced —</b> ${escapeHtml(p.narrative.introduced)}</div>
+            <div class="tl-row"><b>Why it matters —</b> ${escapeHtml(p.narrative.whyItMatters)}</div>` : ''}
+            <div class="tl-view">View paper (DOI) →</div>
+          </div>
+        </div>
+        </a>
+      </div>
+    `).join('');
+  }
+
+  function renderRecent(pubs, limit = 4){
+    const recent = pubs
+      .filter(p => p.type !== 'preparation')
+      .sort(byDateDesc)
+      .slice(0, limit);
+    const el = document.getElementById('recent-pub-list');
+    el.innerHTML = recent.map(p => {
+      const titleHtml = p.doi
+        ? `<a href="${p.doi}">${escapeHtml(p.title)}</a>`
+        : escapeHtml(p.title);
+      const links = [];
+      if (p.cite) links.push(`<a class="pub-cite" href="${p.cite}">Cite</a>`);
+      if (p.doi) links.push(`<a class="pub-cite" href="${p.doi}">DOI</a>`);
+      return `
+        <div class="pub-item">
+          <span class="pub-authors">${escapeHtml(p.authors.join(', '))}</span> (${p.year}).
+          ${titleHtml}.
+          <span class="pub-venue">${escapeHtml(p.venue)}</span>.
+          ${links.join(' ')}
+        </div>`;
+    }).join('');
+  }
+
+  fetch('/data/publications.json')
+    .then(res => res.json())
+    .then(pubs => {
+      renderFeatured(pubs);
+      renderRecent(pubs);
+    })
+    .catch(err => {
+      console.error('Could not load publications.json', err);
+      document.getElementById('featured-timeline').textContent = 'Publications failed to load.';
+    });
 </script>
 
 </body>
