@@ -6,6 +6,7 @@
 <meta name="description" content="Publications by Houlin Xu, Postdoctoral Fellow at Johns Hopkins University.">
 <title>Publications — Houlin Xu</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237a3b2e'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23faf7f2' text-anchor='middle'%3EHX%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/assets/css/pdf-modal.css">
 <style>
   /* Same design tokens as the homepage concept, so this page
      reads as part of the same site instead of a different theme. */
@@ -173,6 +174,7 @@
     const links = [];
     if (p.cite) links.push(`<a href="${p.cite}">Cite</a>`);
     if (p.doi) links.push(`<a href="${p.doi}">DOI</a>`);
+    if (p.pdf) links.push(`<a class="pdf-link" data-pdf="${p.pdf}" href="${p.pdf}">PDF</a>`);
     return `
       <div class="pub-card">
         <div class="pub-meta"><span>${p.year}</span> &middot; <span class="pub-venue">${escapeHtml(p.venue)}</span></div>
@@ -210,6 +212,8 @@
       document.getElementById('journal-list').textContent = 'Publications failed to load.';
     });
 </script>
+
+<script src="/assets/js/pdf-modal.js"></script>
 
 </body>
 </html>

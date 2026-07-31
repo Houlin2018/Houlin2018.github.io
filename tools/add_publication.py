@@ -15,6 +15,7 @@ Usage
     python tools/add_publication.py path/to/entry.bib
     python tools/add_publication.py path/to/entry.bib --force
     python tools/add_publication.py path/to/entry.bib --site-dir /path/to/site
+    python tools/add_publication.py path/to/entry.bib --pdf path/to/paper.pdf
 
 What it does
 ------------
@@ -32,6 +33,12 @@ What it does
    citations/<key>.bib. Both pages sort by the `date` field at page-load
    time in the browser, so ordering is automatic on every visit -- you
    never edit HTML by hand.
+5. With --pdf, copies the given PDF to assets/pdfs/<key>.pdf and sets the
+   entry's "pdf" field, which makes a "PDF" / "Read PDF" link appear that
+   opens the file in an in-page viewer (see assets/js/pdf-modal.js)
+   instead of navigating away. Only added for entries that only exist as
+   a single-entry .bib file (one paper at a time), since one PDF maps to
+   one key.
 
 New entries are added with "featured": false. Making something a Featured
 Publication (with the case-study write-up and thumbnail image on the
@@ -302,7 +309,7 @@ def save_publications(json_path, pubs):
         fh.write("\n")
 
 
-def process_bib_file(bib_path, site_dir, force=False):
+def process_bib_file(bib_path, site_dir, force=False, pdf_path=None):
     with open(bib_path, encoding="utf-8") as fh:
         bib_text = fh.read()
 
@@ -311,6 +318,10 @@ def process_bib_file(bib_path, site_dir, force=False):
     citations_dir = os.path.join(site_dir, "citations")
     os.makedirs(citations_dir, exist_ok=True)
     pubs = load_publications(json_path)
+
+    if pdf_path and len(entries) > 1:
+        raise SystemExit("--pdf only makes sense with a single-entry .bib file "
+                          "(one PDF can't map to multiple publications)")
 
     added, skipped = [], []
 
@@ -327,6 +338,14 @@ def process_bib_file(bib_path, site_dir, force=False):
         with open(cite_path, "w", encoding="utf-8") as fh:
             fh.write(entry["raw"].strip() + "\n")
 
+        if pdf_path:
+            pdfs_dir = os.path.join(site_dir, "assets", "pdfs")
+            os.makedirs(pdfs_dir, exist_ok=True)
+            dest = os.path.join(pdfs_dir, f"{pub['key']}.pdf")
+            with open(pdf_path, "rb") as src, open(dest, "wb") as dst:
+                dst.write(src.read())
+            pub["pdf"] = f"/assets/pdfs/{pub['key']}.pdf"
+
         pubs.append(pub)
         added.append(pub)
 
@@ -341,14 +360,17 @@ def main():
     parser.add_argument("bib_file", help="Path to a .bib file (one entry or many)")
     parser.add_argument("--site-dir", default="site", help="Path to the site/ folder (default: ./site)")
     parser.add_argument("--force", action="store_true", help="Add even if a DOI/title match already exists")
+    parser.add_argument("--pdf", metavar="PATH", help="PDF to attach, copied to assets/pdfs/<key>.pdf "
+                                                       "(enables the in-page 'Read PDF' viewer)")
     args = parser.parse_args()
 
-    added, skipped = process_bib_file(args.bib_file, args.site_dir, force=args.force)
+    added, skipped = process_bib_file(args.bib_file, args.site_dir, force=args.force, pdf_path=args.pdf)
 
     if added:
         print(f"Added {len(added)} publication(s):")
         for p in added:
-            print(f"  + {p['key']}  ({p['type']}, {p['date'] or 'no date'})  ->  site{p['cite']}")
+            pdf_note = f"  (+ site{p['pdf']})" if p.get("pdf") else ""
+            print(f"  + {p['key']}  ({p['type']}, {p['date'] or 'no date'})  ->  site{p['cite']}{pdf_note}")
         print("\ndata/publications.json updated. Commit and push site/ to publish --")
         print("no HTML needs editing, both pages re-sort by date automatically.")
     if skipped:
