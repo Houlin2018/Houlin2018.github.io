@@ -207,19 +207,20 @@
   .award-title{ color:var(--ink); }
   .award-meta{ white-space:nowrap; }
 
-  /* talks: conference slide decks, embedded inline as PDFs so a visitor
-     can flip through without leaving the page (see assets/slides/) */
-  .talk-item{ margin-top:1.8rem; padding-top:1.8rem; border-top:1px solid var(--line); }
-  .talk-item:first-of-type{ margin-top:1.4rem; padding-top:0; border-top:none; }
-  .talk-meta{ font-size:.8rem; color:var(--ink-soft); margin-bottom:.35rem; }
-  .talk-meta .talk-venue{ color:var(--accent); font-weight:500; }
-  .talk-title{ font-size:1rem; margin-bottom:.3rem; }
-  .talk-authors{ font-size:.85rem; color:var(--ink-soft); margin-bottom:.8rem; }
-  .talk-embed{
-    width:100%; aspect-ratio:16/9; border:1px solid var(--line); border-radius:var(--radius);
-    overflow:hidden; background:var(--bg-card-alt);
+  /* talks: conference slide decks, shown as compact cards with a static
+     first-slide thumbnail as the "front page". Clicking a card opens the
+     full deck in the shared PDF modal (assets/js/pdf-modal.js) via its
+     "pdf-link" convention, same as paper PDFs. */
+  .talk-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:1.3rem; margin-top:1.4rem; }
+  .talk-card{
+    display:block; color:inherit; text-decoration:none; border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; background:var(--bg-card); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
-  .talk-embed iframe{ width:100%; height:100%; border:none; }
+  .talk-card:hover{ transform:translateY(-3px); border-color:var(--accent); box-shadow:0 8px 20px rgba(0,0,0,.08); text-decoration:none; }
+  [data-theme="dark"] .talk-card:hover{ box-shadow:0 8px 20px rgba(0,0,0,.35); }
+  .talk-card-title{ font-size:.88rem; font-weight:500; padding:.8rem .9rem .6rem; }
+  .talk-thumb{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:var(--bg-card-alt); }
+  .talk-card-meta{ font-size:.78rem; color:var(--ink-soft); padding:.6rem .9rem .8rem; }
 
   /* publications as case studies, kept in a timeline rail */
   .timeline{ position:relative; margin-top:1.4rem; padding-left:1.4rem; border-left:2px solid var(--line); }
@@ -410,34 +411,36 @@
       </ul>
     </section>
 
-    <!-- ============ TALKS: conference presentation slides, embedded inline as PDFs.
-         Hand-written for now (only a few talks); each .talk-embed iframe points
-         at a PDF in assets/slides/. If videos get added later, they can live in
-         the same section as additional .talk-item cards with a video embed
-         instead of the PDF iframe. ============ -->
+    <!-- ============ TALKS: conference presentation slides, as compact cards.
+         Hand-written for now (only a few talks). Each card is a single <a
+         class="pdf-link"> (from pdf-modal.js) showing a static first-slide
+         thumbnail (assets/images/talks/) as the "front page"; clicking it
+         opens the full deck (assets/slides/) in the same in-page PDF viewer
+         used for papers. If videos get added later, they can live in this
+         same grid as additional .talk-card tiles pointing at a video embed
+         instead of a PDF. ============ -->
     <section id="talks">
       <p class="kicker">Talks</p>
       <h2 style="font-size:1.4rem;">Selected presentations</h2>
 
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">2025</span> <span class="talk-venue">EMI 2025</span></div>
-        <div class="talk-title">Poromechanical Modeling of Growth of Hydraulic Fracture Networks in Rocks with Pre-existing Weak Layers</div>
-        <div class="talk-authors">Houlin Xu, Anh Nguyen, Yang Zhao, Zdeněk P. Bažant</div>
-        <div class="talk-embed"><iframe src="/assets/slides/emi2025-hydraulic-fracture.pdf" title="Poromechanical Modeling of Growth of Hydraulic Fracture Networks in Rocks with Pre-existing Weak Layers — slides" loading="lazy"></iframe></div>
-      </div>
+      <div class="talk-grid">
+        <a class="talk-card pdf-link" data-pdf="/assets/slides/emi2025-hydraulic-fracture.pdf" href="/assets/slides/emi2025-hydraulic-fracture.pdf">
+          <div class="talk-card-title">Poromechanical Modeling of Growth of Hydraulic Fracture Networks in Rocks with Pre-existing Weak Layers</div>
+          <img class="talk-thumb" src="/assets/images/talks/emi2025-hydraulic-fracture.png" alt="Title slide: Poromechanical Modeling of Growth of Hydraulic Fracture Networks in Rocks with Pre-existing Weak Layers">
+          <div class="talk-card-meta">May 28, 2025 &middot; EMI 2025</div>
+        </a>
 
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">2024</span> <span class="talk-venue">EMI/PMC 2024</span></div>
-        <div class="talk-title">Asymptotically Matched Extrapolation of Fishnet Failure Probability to Continuum Scale</div>
-        <div class="talk-authors">Houlin Xu, Joshua Vievering, Hoang Nguyen, Yupeng Zhang, Jia-Liang Le, Zdeněk P. Bažant</div>
-        <div class="talk-embed"><iframe src="/assets/slides/emi2024-fishnet.pdf" title="Asymptotically Matched Extrapolation of Fishnet Failure Probability to Continuum Scale — slides" loading="lazy"></iframe></div>
-      </div>
+        <a class="talk-card pdf-link" data-pdf="/assets/slides/emi2024-fishnet.pdf" href="/assets/slides/emi2024-fishnet.pdf">
+          <div class="talk-card-title">Asymptotically Matched Extrapolation of Fishnet Failure Probability to Continuum Scale</div>
+          <img class="talk-thumb" src="/assets/images/talks/emi2024-fishnet.png" alt="Title slide: Asymptotically Matched Extrapolation of Fishnet Failure Probability to Continuum Scale">
+          <div class="talk-card-meta">May 29, 2024 &middot; EMI/PMC 2024, Chicago</div>
+        </a>
 
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">2024</span> <span class="talk-venue">EMI/PMC 2024</span></div>
-        <div class="talk-title">Upgrade of Fracture Mechanics by Spress-Sprain Relations: Limiting Damage Field Curvature</div>
-        <div class="talk-authors">Houlin Xu, Anh Nguyen, Karel Matouš, Zdeněk P. Bažant</div>
-        <div class="talk-embed"><iframe src="/assets/slides/emi2024-slcbm.pdf" title="Upgrade of Fracture Mechanics by Spress-Sprain Relations: Limiting Damage Field Curvature — slides" loading="lazy"></iframe></div>
+        <a class="talk-card pdf-link" data-pdf="/assets/slides/emi2024-slcbm.pdf" href="/assets/slides/emi2024-slcbm.pdf">
+          <div class="talk-card-title">Upgrade of Fracture Mechanics by Spress-Sprain Relations: Limiting Damage Field Curvature</div>
+          <img class="talk-thumb" src="/assets/images/talks/emi2024-slcbm.png" alt="Title slide: Upgrade of Fracture Mechanics by Spress-Sprain Relations: Limiting Damage Field Curvature">
+          <div class="talk-card-meta">May 29, 2024 &middot; EMI/PMC 2024, Chicago</div>
+        </a>
       </div>
     </section>
 
