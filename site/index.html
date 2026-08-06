@@ -221,6 +221,17 @@
   .talk-card-title{ font-size:.88rem; font-weight:500; padding:.8rem .9rem .6rem; }
   .talk-thumb{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:var(--bg-card-alt); }
   .talk-card-meta{ font-size:.78rem; color:var(--ink-soft); padding:.6rem .9rem .8rem; }
+  /* play-button overlay, shown on video cards (.video-link) to distinguish
+     them from slide-deck cards at a glance */
+  .talk-thumb-wrap{ position:relative; }
+  .talk-play-icon{
+    position:absolute; inset:0; margin:auto; width:46px; height:46px; border-radius:50%;
+    background:rgba(0,0,0,.55); display:flex; align-items:center; justify-content:center;
+  }
+  .talk-play-icon::after{
+    content:''; width:0; height:0; margin-left:3px;
+    border-style:solid; border-width:9px 0 9px 15px; border-color:transparent transparent transparent #fff;
+  }
 
   /* publications as case studies, kept in a timeline rail */
   .timeline{ position:relative; margin-top:1.4rem; padding-left:1.4rem; border-left:2px solid var(--line); }
@@ -411,19 +422,28 @@
       </ul>
     </section>
 
-    <!-- ============ TALKS: conference presentation slides, as compact cards.
-         Hand-written for now (only a few talks). Each card is a single <a
-         class="pdf-link"> (from pdf-modal.js) showing a static first-slide
-         thumbnail (assets/images/talks/) as the "front page"; clicking it
-         opens the full deck (assets/slides/) in the same in-page PDF viewer
-         used for papers. If videos get added later, they can live in this
-         same grid as additional .talk-card tiles pointing at a video embed
-         instead of a PDF. ============ -->
+    <!-- ============ TALKS: presentation slides and videos, as compact cards.
+         Hand-written for now (only a few talks). Each card is a single <a>
+         (from pdf-modal.js) with a thumbnail as the "front page"; clicking
+         it opens the full deck/video in the same in-page viewer. Slide
+         cards use class="pdf-link" + data-pdf pointing at a PDF in
+         assets/slides/; video cards use class="video-link" + data-video
+         pointing at a YouTube "embed" URL (data-open holds the normal
+         watch URL, used for the "Open in new tab" link). ============ -->
     <section id="talks">
       <p class="kicker">Talks</p>
       <h2 style="font-size:1.4rem;">Selected presentations</h2>
 
       <div class="talk-grid">
+        <a class="talk-card video-link" data-video="https://www.youtube.com/embed/1qSnPS9jvpw" data-open="https://youtu.be/1qSnPS9jvpw" href="https://youtu.be/1qSnPS9jvpw" target="_blank" rel="noopener">
+          <div class="talk-card-title">Sprain Energy Consequences for Damage Localization and Fracture Mechanics</div>
+          <div class="talk-thumb-wrap">
+            <img class="talk-thumb" src="https://img.youtube.com/vi/1qSnPS9jvpw/hqdefault.jpg" alt="Video thumbnail: Sprain Energy Consequences for Damage Localization and Fracture Mechanics">
+            <span class="talk-play-icon" aria-hidden="true"></span>
+          </div>
+          <div class="talk-card-meta">2025 &middot; USNC/TAM 5MT Competition</div>
+        </a>
+
         <a class="talk-card pdf-link" data-pdf="/assets/slides/emi2025-hydraulic-fracture.pdf" href="/assets/slides/emi2025-hydraulic-fracture.pdf">
           <div class="talk-card-title">Poromechanical Modeling of Growth of Hydraulic Fracture Networks in Rocks with Pre-existing Weak Layers</div>
           <img class="talk-thumb" src="/assets/images/talks/emi2025-hydraulic-fracture.png" alt="Title slide: Poromechanical Modeling of Growth of Hydraulic Fracture Networks in Rocks with Pre-existing Weak Layers">
