@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Houlin Xu, Postdoctoral Fellow at Johns Hopkins University. Mechanics-informed computation for predicting material failure under uncertainty.">
 <title>Houlin Xu</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237a3b2e'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23faf7f2' text-anchor='middle'%3EHX%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="stylesheet" href="/assets/css/pdf-modal.css">
 <style>
   /* ============================================================
@@ -221,6 +221,9 @@
   .talk-card-title{ font-size:.88rem; font-weight:500; padding:.8rem .9rem .6rem; }
   .talk-thumb{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:var(--bg-card-alt); }
   .talk-card-meta{ font-size:.78rem; color:var(--ink-soft); padding:.6rem .9rem .8rem; }
+  /* for talks that have both a video and a slide deck: two explicit action
+     links instead of the whole card being one destination */
+  .talk-card-links{ display:flex; gap:1rem; font-size:.8rem; padding:0 .9rem .9rem; margin-top:-.4rem; }
   /* play-button overlay, shown on video cards (.video-link) to distinguish
      them from slide-deck cards at a glance */
   .talk-thumb-wrap{ position:relative; }
@@ -441,14 +444,18 @@
             <img class="talk-thumb" src="https://img.youtube.com/vi/1qSnPS9jvpw/hqdefault.jpg" alt="Video thumbnail: Sprain Energy Consequences for Damage Localization and Fracture Mechanics">
             <span class="talk-play-icon" aria-hidden="true"></span>
           </div>
-          <div class="talk-card-meta">2025 &middot; USNC/TAM 5MT Competition</div>
+          <div class="talk-card-meta">September 26, 2025 &middot; USNC/TAM 5MT Competition</div>
         </a>
 
-        <a class="talk-card pdf-link" data-pdf="/assets/slides/emi2025-hydraulic-fracture.pdf" href="/assets/slides/emi2025-hydraulic-fracture.pdf">
+        <div class="talk-card">
           <div class="talk-card-title">Poromechanical Modeling of Growth of Hydraulic Fracture Networks in Rocks with Pre-existing Weak Layers</div>
           <img class="talk-thumb" src="/assets/images/talks/emi2025-hydraulic-fracture.png" alt="Title slide: Poromechanical Modeling of Growth of Hydraulic Fracture Networks in Rocks with Pre-existing Weak Layers">
           <div class="talk-card-meta">May 28, 2025 &middot; EMI 2025, Anaheim</div>
-        </a>
+          <div class="talk-card-links">
+            <a class="video-link" data-video="https://www.youtube.com/embed/sqQ4KswOdpo" data-open="https://youtu.be/sqQ4KswOdpo" href="https://youtu.be/sqQ4KswOdpo" target="_blank" rel="noopener">&#9654; Watch video</a>
+            <a class="pdf-link" data-pdf="/assets/slides/emi2025-hydraulic-fracture.pdf" href="/assets/slides/emi2025-hydraulic-fracture.pdf">View slides &rarr;</a>
+          </div>
+        </div>
 
         <a class="talk-card pdf-link" data-pdf="/assets/slides/emi2024-fishnet.pdf" href="/assets/slides/emi2024-fishnet.pdf">
           <div class="talk-card-title">Asymptotically Matched Extrapolation of Fishnet Failure Probability to Continuum Scale</div>
